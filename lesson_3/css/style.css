@@ -1,0 +1,58 @@
+@import url("reset.css");
+
+*{
+	color: #fff;
+}
+
+.header .header__link{
+	color: green;
+}
+
+.location a {
+  color: blue;
+}
+
+img + div{
+	color: #013f2a;
+}
+
+.history p {
+	color: yellowgreen;
+}
+
+.history div ~ p {
+	color: blue;
+}
+
+.history div + p {
+	color: yellow;
+}
+
+.location *{
+	color: gray;
+}
+
+.relief > p {
+	color: pink;
+}
+
+[class*="__title"] {
+  color: red;
+}
+
+.location__title.title{
+	color: #882b20;
+}
+
+div .location__item{
+	color: #9c60f8;
+}
+
+.location__ports,
+.location__borders{
+	color: black;
+}
+
+#glory-to-heroes{
+	color: yellow;
+}
