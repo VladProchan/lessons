@@ -12,11 +12,8 @@
 body {
   font-family: "Roboto", sans-serif;
   line-height: 1.875;
-  color: #2b2929;
   color: #445252;
 }
-/* font-family: "Roboto", sans-serif; */
-/* font-family: "Proxima Nova", sans-serif; */
 
 .header{
   text-align: center;
@@ -31,7 +28,6 @@ body {
 
 .header__list{
   font-size: 30px;
-  
 }
 
 span {
