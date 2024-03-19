@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="uk">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/style.css">
+		<title>Lesson 5</title>
+	</head>
+	<body>
+		<header>
+			<div id="header" class="header">
+				<h1 class="header__title">Домашка до уроку №5</h1>
+				<ul class="header__list">
+					<li class="header__item">
+						<a class="header__link" href="#skills">Здобуті навички</a>
+					</li>
+					<li class="header__item">
+						<a class="header__link" href="#products">Блок №1</a>
+					</li>
+					<li class="header__item">
+						<a class="header__link" href="#design">Блок №2</a>
+					</li>
+					<li class="header__item">
+						<a class="header__link" href="#krovato">Блок №3</a>
+					</li>
+				</ul>
+			</div>
+		</header>
+		<main>
+			<div id="skills" class="skills">
+				<a class="skills__padding" href="#">Кнопочка за допомогою
+					<span>Padding</span> та властивості <span>display: inline-block</span>
+					;)</a>
+				<div class="skills__margin">
+					До цього блоку відступ був зроблений за допомогою <span>Margin</span>
+				</div>
+				<div class="skills__imposition">
+					За допомогою <span>Margin</span> блоки можна накладати один на одного
+				</div>
+				<div class="skills__width">
+					Також блокам можливо задавати обмежену ширину за допомогою властивості
+					<span>width, max-width, min-width</span>
+				</div>
+				<div class="skills__height">
+					І про висоту не забуваємо за допомогою властивостей <span>height,
+						min-height, max-height</span>
+				</div>
+				<div class="skills__inline">
+					Блок був блочним а став рядковим :)
+				</div>
+				<a class="skills__block" href="#">І навпаки</a>
+				<div class="skills__none">
+					Блок взагалі можна прибрати з виводу результату
+				</div>
+				<!-- Моливо керувати відображенням контенту блочного елементу -->
+				<div class="skills__overflow">
+					<div class="skills__item">
+						<div class="skills__content visible">
+							<h2>Увесь контент навіть якщо він не влазить за замовченням</h2>
+							<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem
+								asperiores alias animi eius consectetur eum eos quo, similique veniam
+								repellendus. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+								Autem
+								asperiores alias animi eius consectetur eum eos quo, similique veniam
+								repellendus.
+							</p>
+						</div>
+					</div>
+					<div class="skills__item">
+						<div class="skills__content hidden">
+							<h2>Тільки те що в середині</h2>
+							<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem
+								asperiores alias animi eius consectetur eum eos quo, similique veniam
+								repellendus. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+								Autem
+								asperiores alias animi eius consectetur eum eos quo, similique veniam
+								repellendus.
+							</p>
+						</div>
+					</div>
+					<div class="skills__item">
+
+						<div class="skills__content scroll">
+							<h2>Завжди додаються смужки прокрутки</h2>
+							<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem
+								asperiores alias animi eius consectetur eum eos quo, similique veniam
+								repellendus. <br> Lorem ipsum, dolor sit amet consectetur adipisicing
+								elit. Autem
+								asperiores alias animi eius consectetur eum eos quo, <br> similique
+								veniam
+								repellendus.
+							</p>
+						</div>
+					</div>
+					<div class="skills__item">
+						<div class="skills__content auto">
+							<h2>Додаються смужки прокрутки тільки за необхідності</h2>
+							<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem
+								asperiores alias animi eius consectetur eum eos quo, similique veniam
+								repellendus. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+								Autem
+								asperiores alias animi eius consectetur eum eos quo, similique veniam
+								repellendus.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="products" class="products">
+				<h2 class="products__title">Follow products and discounts on Instagram</h2>
+				<div class="products__galery">
+					<div class="products__image">
+						<img src="img/products/01.jpg" alt="Дівчина стрибає">
+					</div>
+					<div class="products__image">
+						<img src="img/products/02.jpg" alt="Сумка на дічині">
+					</div>
+					<div class="products__image">
+						<img src="img/products/03.jpg" alt="Годинник на руці">
+					</div>
+					<div class="products__image">
+						<img src="img/products/04.jpg" alt="Гарний хлопчина сидить та позує">
+					</div>
+					<div class="products__image">
+						<img src="img/products/05.jpg" alt="Грана сукня на дівчині">
+					</div>
+					<div class="products__image">
+						<img src="img/products/06.jpg" alt="Годинник на руці">
+					</div>
+				</div>
+			</div>
+			<div id="design" class="design">
+				<div class="design__container">
+					<h2 class="design__title">Оформлення вітальні. Які м'які меблі краще
+						вибрати?</h2>
+					<img class="design__image" src="img/image_01.jpg"
+						alt="Жовте крісло стоіть по серед гарної вітальні">
+					<div class="design__text">
+						<p>
+							Вітальня – це основна кімната у кожному будинку. Саме вона служить для
+							прийому гостей, проведення часу всією
+							сім'єю та просто для відпочинку у приємній теплій атмосфері. Оформляючи свій будинок та вітальню зокрема, всі намагаються зробити її максимально зручною, комфортною та красивою. Основним та центральним елементом оформлення вітальні, як і будь-якої іншої кімнати, є м'які
+							меблі.
+						</p>
+						<p>
+							Будь-які меблі для вітальні повинні бути не тільки стильними і красивими,
+							але і функціональними. На таких меблів має бути зручно та приємно
+							відпочивати та приймати гостей. Однак сьогодні існує величезна
+							різноманітність найрізноманітніших м'яких меблів для вітальні, яка
+							підходить для кімнат різних розмірів і форм. На чому варто зупинити свій
+							вибір? Як краще оформити свою вітальню, щоб вам було комфортно, а гості
+							хотіли приходити до вас знову та знову?
+						</p>
+					</div>
+					<div class="design__lable">
+						На сайті інтернет магазину Кровато представлено велику різноманітність
+						м'яких меблів для вітальні, серед яких кожен зможе вибрати для себе
+						найбільш вдалий варіант. У нас ви знайдете:
+					</div>
+					<ul class="design__list">
+						<li class="design__item">
+							<p>
+								Прямі дивани. Такі дивани вважаються класикою. Вони підходять для
+								віталень
+								будь-яких форм та розмірів. Прямий диван виглядає стильно та лаконічно,
+								на
+								ньому зручно відпочивати, приймати гостей або навіть спати. Прямі дивани
+								можуть стояти біля стіни, так і в центрі кімнати. Багато моделей прямих
+								диванів легко розкладаються, перетворюючись на повноцінне спальне місце.
+								Також більшість диванів мають великі та місткі ніші, які є додатковим
+								місцем для зберігання;
+							</p>
+						</li>
+						<li class="design__item">
+							<p>
+								Кутові дивани Кутові дивани вважаються найзручнішими та комфортнішими.
+								Вони ідеально підійдуть для приємного проведення часу в колі сім'ї або
+								друзів. Кутові дивани в основному використовуються для оформлення
+								великих
+								віталень, так як вони займають багато місця, і для кімнат з невеликою
+								площею просто не підійдуть;
+							</p>
+						</li>
+						<li class="design__item">
+							<p>
+								Тахти. Тахта - це одна з варіацій дивана, але стильніша і
+								мінімалістична.
+								Виглядають тахти дуже незвично і можуть підійти для будь-якого
+								інтер'єру. Також тахти більше ніж звичайні дивани підходять для сну, оскільки в їх основі не пружинні блоки, а дерев'яні
+								ламелі або ортопедичні матраци;
+							</p>
+						</li>
+						<li class="design__item">
+							<p>
+								Крісла. Крісло – це особливий предмет інтер'єру. Сучасні дизайнери не
+								часто використовують його, вважаючи застарілим, проте саме крісла
+								створюють особливий затишок та комфорт у будь-якій кімнаті. Сьогодні
+								існує
+								величезна різноманітність класичних та сучасних моделей крісел, що
+								дозволяє кожному відшукати ідеальне крісло для свого будинку;
+							</p>
+						</li>
+						<li class="design__item">
+							<p>
+								Набір меблів. Комплект м'яких меблів – це відмінне рішення для тих, хто
+								хоче меблювати свою вітальню не лише диваном, а й кріслами. Існують
+								набори
+								з одним або двома кріслами, із прямими або кутовими диванами. Основна
+								перевага будь-якого готового меблевого гарнітура – це те, що предмети
+								меблів у ньому ідеально поєднуються один з одним, і вам не потрібно буде
+								витрачати свій час та сили на їхній підбір.
+							</p>
+						</li>
+					</ul>
+					<div class="design__last-text">
+						<p>
+							Підбір
+							м'яких меблів для вітальні – це заняття непросте. Однак при виборі та покупці меблів для своєї вітальні пам'ятайте,
+							що якісні м'які меблі повинні бути не тільки красивими, але й зручними
+							для
+							вас і всіх мешканців вашого будинку.
+						</p>
+					</div>
+				</div>
+			</div>
+			<div id="krovato" class="krovato">
+				<div class="krovato__container">
+					<h2 class="krovato__title">KROVATO це</h2>
+					<div class="krovato__wrap">
+						<div class="krovato__item">
+							<img src="img/icons/point.png" alt="Іконка галочки">
+							<h3>Власне виробництво</h3>
+							<p>
+								Також у нас є своє виробництво, завдяки чому ми можемо виготовити меблі
+								безпосередньо за Вашими побажаннями: нестандартний розмір, висота,
+								виготовлення меблів за Вашим ескізом. Ліжка, тумби, комоди, шафи - все
+								це ми можемо доопрацювати за Вашим бажанням.
+							</p>
+						</div>
+						<div class="krovato__item">
+							<img src="img/icons/point.png" alt="Іконка галочки">
+							<h3>Професіонали</h3>
+							<p>
+								Наші вироби виготовлені на професійному обладнанні з ясена, вільхи,
+								бука, дуба, металу та ДСП. Фабрики із закритим циклом виробництва –
+								контроль якості кожному етапі: від завезення дерева в цех до складання
+								ліжка в клієнта.
+							</p>
+						</div>
+						<div class="krovato__item">
+							<img src="img/icons/point.png" alt="Іконка галочки">
+							<h3>Великий вибір</h3>
+							<p>
+								На нашому сайті Ви легко зможете підібрати собі спальню, вітальню або
+								дитячу кімнату "під ключ". Величезний вибір матраців, ліжок, а також
+								тумбочок та комодів чекають на Вас.
+							</p>
+						</div>
+						<div class="krovato__item">
+							<img src="img/icons/point.png" alt="Іконка галочки">
+							<h3>Контроль якості</h3>
+							<p>
+								Наші досвідчені менеджери, з радістю допоможуть підібрати Вам меблі, які
+								Вас радуватимуть довгі роки. Завдяки власній службі доставки та
+								збирання, ми підтримуємо контроль якості від виробництва до клієнта.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<a href="#header">Повернутися на верх ↑</a>
+		</footer>
+	</body>
+</html>
