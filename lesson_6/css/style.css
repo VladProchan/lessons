@@ -280,7 +280,7 @@ body {
 .explore {
   font-family: "Quicksand";
   color: #fff;
-  background: url("../img/explore/filter.png") 0 0 / 100% auto no-repeat #914cff;
+  background: url("../img/explore/filter.png") center / cover no-repeat #914cff;
 }
 
 .explore__container {
@@ -315,14 +315,15 @@ body {
   background-color: #fff;
   padding: 11.5px 20px;
   border-radius: 8px;
+  font-weight: 700;
+  color: #000;
+  line-height: 1.5625;
 }
 
 .explore__button span {
   background: url("../img/explore/icon.png") 0 0 / 17px no-repeat;
   padding-left: 25px;
-  font-weight: 700;
-  color: #000;
-  line-height: 1.5625; /* 25/16 */
+   /* 25/16 */
 }
 
 /* collections==================================================================================================== */
@@ -332,9 +333,8 @@ body {
   padding-top: 80px;
   padding-bottom: 60px;
   font-family: "Open Sans", sans-serif;
-  background-color: #f3f4f4;
-  background: url("../img/collections/decor_01.png") 0 510px no-repeat,
-    url("../img/collections/decor_02.png") 100% 260px no-repeat;
+  background: url("../img/collections/decor_01.png") left bottom 125px no-repeat,
+    url("../img/collections/decor_02.png") right bottom 150px no-repeat, #f3f4f4;
 }
 
 .collections__container {
