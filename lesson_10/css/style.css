@@ -157,15 +157,17 @@ body {
   left: 100%;
   background: #fff;
   height: 100%;
-  width: 318px;
+  width: 348px;
   border-radius: 0 8px 8px 0;
   padding: 8px 0;
+  
 }
 
 .sub-menu__list {
   padding: 20px 20px 20px 30px;
   height: 100%;
   position: relative;
+  overflow-y: auto;
 }
 
 .sub-menu__list::before {
@@ -197,24 +199,38 @@ body {
   padding-top: 150px;
 }
 
+.practis__wrap{
+  font-size: 0;
+  margin: 0 -5px;
+}
+
 .card {
-  border-radius: 8px;
-  max-width: 250px;
-  min-height: 300px;
+  max-width: 20%;
+  margin-bottom: 25px;
+  padding: 0 5px;
+}
+
+.card__contant{
   background: url("../img/card/bg.svg") 0 bottom no-repeat, #fff;
   position: relative;
-  margin-bottom: 25px;
+  border-radius: 8px;
+  overflow: hidden;
+  min-height: 300px;
 }
 
 .card:not(:last-child) {
-  margin-right: 4px;
+  /* margin-right: 4px; */
 }
 
-.card:hover {
+.card__contant:hover {
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
 }
 
-.card::after {
+.card__image img{
+  max-width: 100%;
+}
+
+.card__contant::after {
   content: "";
   background: url("../img/card/icon/arrow.svg") 0 0 no-repeat;
   position: absolute;
