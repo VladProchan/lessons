@@ -167,23 +167,23 @@
                   <h3 class="delivery-form__title title-form"><img src="img/form/icon-dostavka.svg" alt="dostavka"><span>Вибір способу доставки</span></h3>
                   <div class="delivery-form__wrap">
                     <label class="delivery-form__radio radio-delivery" for="radio-delivery-1">
-                      <input value="self-pickup" tabindex="7" name="delivery" id="radio-delivery-1" class="radio-delivery__input" type="radio">
+                      <input checked value="self-pickup" tabindex="7" name="delivery" id="radio-delivery-1" class="radio-delivery__input" type="radio">
                       <span class="radio-delivery__border"></span>
-                      <img class="delivery-form__icon" src="img/form/check-circle.svg" alt="check">
+                      <span class="delivery-form__icon delivery-form__icon--location"></span>
                       <span class="radio-delivery__text">Самовивіз із магазину</span>
                       <span class="radio-delivery__price">Безкоштовно</span>
                     </label>
                     <label class="delivery-form__radio radio-delivery" for="radio-delivery-2">
                       <input value="new-post" tabindex="8" name="delivery" id="radio-delivery-2" class="radio-delivery__input" type="radio">
                       <span class="radio-delivery__border"></span>
-                      <img class="delivery-form__icon" src="img/form/np.svg" alt="np">
+                      <span class="delivery-form__icon delivery-form__icon--np"></span>
                       <span class="radio-delivery__text">Доставка Нова Пошта</span>
                       <span class="radio-delivery__price">≈ від 500 грн</span>
                     </label>
                     <label class="delivery-form__radio radio-delivery" for="radio-delivery-3">
                       <input value="courier" tabindex="9" name="delivery" id="radio-delivery-3" class="radio-delivery__input" type="radio">
                       <span class="radio-delivery__border"></span>
-                      <img class="delivery-form__icon" src="img/form/shop.svg" alt="shop">
+                      <apsn class="delivery-form__icon delivery-form__icon--shop"></apsn>
                       <span class="radio-delivery__text">Доставка кур'єром</span>
                       <span class="radio-delivery__price">≈ від 200 грн</span>
                     </label>
@@ -198,18 +198,18 @@
                       </div>
                       <a href="#" class="location__link">м. Київ, пров. Ізяславський 52, пов. 2</a>
                     </div>
-                    <button type="button" class="location__button"><span>На мапі</span></button>
+                    <button type="button" class="location__button" tabindex="10"><span>На мапі</span></button>
                   </div>
                 </div>
                 <div class="form__payment payment-form">
                   <h3 class="payment-form__title title-form"><img src="img/form/icon-oplata.svg" alt="oplata"><span>Вибір способу оплати</span></h3>
                   <div class="payment-form__wrap">
                     <label class="payment-form__radio radio" for="radio-payment-1">
-                      <input name="payment" value="postpaid" tabindex="10" id="radio-payment-1" class="radio__input" type="radio">
+                      <input checked name="payment" value="postpaid" tabindex="11" id="radio-payment-1" class="radio__input" type="radio">
                       <span class="radio__text">Готівкою при отриманні (Післясплата)</span>
                     </label>  
                     <label class="payment-form__radio radio" for="radio-payment-2">
-                      <input name="payment" value="postpaid" tabindex="11" id="radio-payment-2" class="radio__input" type="radio">
+                      <input name="payment" value="postpaid" tabindex="12" id="radio-payment-2" class="radio__input" type="radio">
                       <span class="radio__text">
                         Оплата карткою на сайті 
                         <img src="img/form/master-card-logo.svg" alt="master-card-logo">
@@ -217,23 +217,23 @@
                       </span>
                     </label>
                     <label class="payment-form__radio radio" for="radio-payment-3">
-                      <input name="payment" value="postpaid" tabindex="12" id="radio-payment-3" class="radio__input" type="radio">
+                      <input name="payment" value="postpaid" tabindex="13" id="radio-payment-3" class="radio__input" type="radio">
                       <span class="radio__text">
                         Privat Pay
                         <img src="img/form/privat-pay-logo.svg" alt="privat-pay-logo"></span>
                     </label>
                     <label class="payment-form__radio radio" for="radio-payment-4">
-                      <input name="payment" value="postpaid" tabindex="13" id="radio-payment-4" class="radio__input" type="radio">
+                      <input name="payment" value="postpaid" tabindex="14" id="radio-payment-4" class="radio__input" type="radio">
                       <span class="radio__text">Кредит від Krovato</span>
                     </label>
                     <label class="payment-form__radio radio" for="radio-payment-5">
-                      <input name="payment" value="postpaid" tabindex="14" id="radio-payment-5" class="radio__input" type="radio">
+                      <input name="payment" value="postpaid" tabindex="15" id="radio-payment-5" class="radio__input" type="radio">
                       <span class="radio__text">
                         Оплата частинами ПриватБанк
                         <img src="img/form/privaty-credit-logo.svg" alt="privaty-credit-logo"></span>
                     </label>
                     <label class="payment-form__radio radio" for="radio-payment-6">
-                      <input name="payment" value="postpaid" tabindex="15" id="radio-payment-6" class="radio__input" type="radio">
+                      <input name="payment" value="postpaid" tabindex="16 " id="radio-payment-6" class="radio__input" type="radio">
                       <span class="radio__text">
                         Оплата частинами МоноБанк
                         <img src="img/form/mono-bank-logo.svg" alt="mono-bank-logo">
@@ -243,7 +243,7 @@
                 </div>  
                 <div class="form__comment comment-form">
                   <h3 class="comment-form__title title-form"><img src="img/form/icon-comment.svg" alt="comment"><span>Коментар до замовлення</span></h3>
-                  <textarea tabindex="16" class="comment-form__textarea" placeholder="Ваш коментар" name="comment" id="comment"></textarea>
+                  <textarea tabindex="17" class="comment-form__textarea" placeholder="Ваш коментар" name="comment" id="comment"></textarea>
                 </div>
                 <div class="form__together together-form">
                   <h3 class="together-form__title title-form"><span>Разом:</span></h3>
@@ -265,12 +265,12 @@
                     </div>
                   </div>
                   <label class="together-form__checkbox checkbox" for="check-together">
-                    <input tabindex="17" id="check-together" class="checkbox__input" type="checkbox">
+                    <input tabindex="18" id="check-together" class="checkbox__input" type="checkbox">
                     <span class="checkbox__text">Не передзвонюйте мені для підтвердження замовлення</span>
                   </label> 
                   <div class="together-form__bottom">
-                    <button type="submit" class="together-form__button">ОФОРМИТИ ЗАМОВЛЕННЯ</button>
-                    <div class="together-form__agreements">Підтверджуючи замовлення, я приймаю умови <a href="#">Угоди користувача</a></div>
+                    <button tabindex="19" type="submit" class="together-form__button">ОФОРМИТИ ЗАМОВЛЕННЯ</button>
+                    <div class="together-form__agreements">Підтверджуючи замовлення, я приймаю умови <a tabindex="20" href="#">Угоди користувача</a></div>
                   </div>
                 </div>
               </form>
