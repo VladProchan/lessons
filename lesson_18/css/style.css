@@ -436,8 +436,8 @@ body {
   }
   @-webkit-keyframes ball-right-animation {
     0% {
-      -webkit-transform: translate(0, 60%);
-              transform: translate(0, 60%);
+      -webkit-transform: translate(0, 0);
+              transform: translate(0, 0);
     }
     33% {
       -webkit-transform: translate(-200%, -100%);
@@ -454,8 +454,8 @@ body {
   }
   @keyframes ball-right-animation {
     0% {
-      -webkit-transform: translate(0, 60%);
-              transform: translate(0, 60%);
+      -webkit-transform: translate(0, 0);
+              transform: translate(0, 0);
     }
     33% {
       -webkit-transform: translate(-200%, -100%);

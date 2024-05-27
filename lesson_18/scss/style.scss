@@ -181,7 +181,7 @@ body {
 
   &__container {
     position: relative;
-    @media (min-width: 991.98px){
+    @media (min-width: 991.98px) {
       &::after {
         content: "";
         position: absolute;
@@ -228,12 +228,12 @@ body {
         opacity: 0.3;
         animation: ball-right-animation 15s linear infinite;
       }
-    
+
       @keyframes ball-left-animation {
         0% {
           transform: translate(0, 0);
         }
-    
+
         33% {
           transform: translate(200%, 100%);
         }
@@ -246,9 +246,9 @@ body {
       }
       @keyframes ball-right-animation {
         0% {
-          transform: translate(0, 60%);
+          transform: translate(0, 0);
         }
-    
+
         33% {
           transform: translate(-200%, -100%);
         }
@@ -260,7 +260,6 @@ body {
         }
       }
     }
-    
   }
 
   &__wrap {
@@ -464,15 +463,15 @@ body {
 .about {
   @include adaptiveValue("padding-top", 120, 20, 0, 1272, 767.98);
   @include adaptiveValue("padding-bottom", 120, 20, 0, 1272, 767.98);
-  @media (min-width: 991.98px){
+  @media (min-width: 991.98px) {
     background: linear-gradient(
-      180deg,
-      rgba(0, 0, 0, 0.9) 0%,
-      rgba(0, 0, 0, 0.99) 85.54%
-    ),
-    url("../img/about/bg.webp") 100% 25% / cover no-repeat;
+        180deg,
+        rgba(0, 0, 0, 0.9) 0%,
+        rgba(0, 0, 0, 0.99) 85.54%
+      ),
+      url("../img/about/bg.webp") 100% 25% / cover no-repeat;
   }
-  
+
   position: relative;
   &__container {
     display: flex;
@@ -490,7 +489,7 @@ body {
       flex-direction: column-reverse;
       row-gap: 40px;
       margin-bottom: 20px;
-      @media (max-width: 991.98px){
+      @media (max-width: 991.98px) {
         &::after {
           content: "";
           position: absolute;
@@ -537,12 +536,12 @@ body {
           opacity: 0.3;
           animation: ball-right-animation 15s linear infinite;
         }
-      
+
         @keyframes ball-left-animation {
           0% {
             transform: translate(0, 0);
           }
-      
+
           33% {
             transform: translate(50%, 80%);
           }
@@ -557,7 +556,7 @@ body {
           0% {
             transform: translate(0, -100%);
           }
-      
+
           33% {
             transform: translate(-50%, -200%);
           }
@@ -569,7 +568,7 @@ body {
           }
         }
       }
-      .media-hero__people{
+      .media-hero__people {
         @include adaptiveValue("width", 376, 177, 0, 1272, 767.98);
         margin: 0 auto;
         z-index: 1;
@@ -660,8 +659,8 @@ body {
     margin-bottom: 80px;
     @include adaptiveValue("margin-bottom", 80, 30, 0, 1272, 767.98);
   }
-  @media (max-width: 991.98px){
-    &__button{
+  @media (max-width: 991.98px) {
+    &__button {
       display: none;
     }
   }
@@ -674,13 +673,12 @@ body {
     overflow: hidden;
     width: 203px;
     height: 38px;
-    @media (max-width: 991.98px){
+    @media (max-width: 991.98px) {
       display: none;
     }
     img {
       animation: button-animation 5s linear infinite;
     }
-    
   }
   @keyframes button-animation {
     0% {
