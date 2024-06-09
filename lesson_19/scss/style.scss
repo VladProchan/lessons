@@ -151,6 +151,26 @@ body {
     column-gap: toRem(21);
   }
   &__icon {
+    width: toRem(20);
+    height: toRem(19);
+    &--heart{
+      background: url('../img/icons/heart-white.svg') center / cover no-repeat;
+      transition: background 0.3s;
+      @media (any-hover: hover){
+        &:hover{
+          background: url('../img/icons/heart-red.svg') center / cover no-repeat;
+        }
+      }
+    }
+    &--search{
+      background: url('../img/icons/search-white.svg') center / cover no-repeat;
+      transition: background 0.3s;
+      @media (any-hover: hover){
+        &:hover{
+          background: url('../img/icons/search-red.svg') center / cover no-repeat;
+        }
+      }
+    }
   }
   &__button {
     span {
