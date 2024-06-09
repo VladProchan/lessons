@@ -11,24 +11,15 @@
       <header class="header">
         <div class="header__container">
           <div class="header__top top-header">
-            <button data-da=".other__link--search, 767.98"
-              class="top-header__search">
-              <img src="img/icons/search.svg" alt="search">
-            </button>
+            <button data-da=".other__link--search, 767.98" class="top-header__search"></button>
             <div class="top-header__logo">
               <img src="img/icons/logo.svg" alt="logo">
             </div>
             <div class="top-header__other other">
-              <a class="other__link" href="#">
-                <div class="other__image">
-                  <img src="img/icons/account.svg" alt="account">
-                </div>
+              <a class="other__link other__link--account" href="#">
                 <span>Account</span>
               </a>
-              <a class="other__link" href="#">
-                <div class="other__image">
-                  <img src="img/icons/shop-darck.svg" alt="shop">
-                </div>
+              <a class="other__link other__link--shop" href="#">
                 <span>Shoping</span>
               </a>
               <a class="other__link other__link--search" href="#">
@@ -177,30 +168,31 @@
         </section>
         <section class="subscribe">
           <div class="subscribe__container">
-            <h2 class="subscribe__title title">Or subscribe to the
+            <h2 class="subscribe__title title title--margin">Or subscribe to the
               newsletter</h2>
-            <div class="subscribe__top top-subscribe">
-              <ul class="top-subscribe__list">
-                <li class="top-subscribe__item">
-                  <a class="top-subscribe__link top-subscribe__link--active"
+            <div class="subscribe__filter filter">
+              <ul class="filter__list">
+                <li class="filter__item">
+                  <a class="filter__link filter__link--active"
                     href="#">all products</a>
                 </li>
-                <li class="top-subscribe__item">
-                  <a class="top-subscribe__link" href="#">t-shirt</a>
+                <li class="filter__item">
+                  <a class="filter__link" href="#">t-shirt</a>
                 </li>
-                <li class="top-subscribe__item">
-                  <a class="top-subscribe__link" href="#">hoodies</a>
+                <li class="filter__item">
+                  <a class="filter__link" href="#">hoodies</a>
                 </li>
-                <li class="top-subscribe__item">
-                  <a class="top-subscribe__link" href="#">jacket</a>
+                <li class="filter__item">
+                  <a class="filter__link" href="#">jacket</a>
                 </li>
               </ul>
-              <button class="top-subscribe__button button-top button-top--icon"><span>filter</span></button>
+              <button
+                class="filter__button filter__button--icon"><span>filter</span></button>
             </div>
-            <div class="subscribe__wrap">
-              <div class="subscribe__card card-subscribe">
-                <div class="card-subscribe__top">
-                  <a href="#" class="card-subscribe__image">
+            <div class="subscribe__wrap-card wrap-card">
+              <div class="subscribe__card-product card-product">
+                <div class="card-product__top">
+                  <a href="#" class="card-product__image">
                     <img src="img/subscribe/01.webp" alt="01">
                   </a>
                   <div class="card-hover">
@@ -214,23 +206,24 @@
                           alt="іконка пошуку">
                       </a>
                     </div>
-                    <a href="#" class="card-hover__button"><span>shop now</span></a>
+                    <a href="#" class="card-hover__button"><span>shop
+                        now</span></a>
                   </div>
                 </div>
-                <div class="card-subscribe__bottom">
-                  <a href="#" class="card-subscribe__name">Adicolor Classics
+                <div class="card-product__bottom">
+                  <a href="#" class="card-product__name">Adicolor Classics
                     Joggers</a>
-                  <div class="card-subscribe__wrap">
-                    <a href="#" class="card-subscribe__category">Dress</a>
-                    <div class="card-subscribe__price price-card-subscribe">
-                      <div class="price-card-subscribe__main">$63.85</div>
+                  <div class="card-product__wrap">
+                    <a href="#" class="card-product__category">Dress</a>
+                    <div class="card-product__price price-card-product">
+                      <div class="price-card-product__main">$63.85</div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="subscribe__card card-subscribe">
-                <div class="card-subscribe__top">
-                  <a href="#" class="card-subscribe__image">
+              <div class="subscribe__card-product card-product">
+                <div class="card-product__top">
+                  <a href="#" class="card-product__image">
                     <img src="img/subscribe/02.webp" alt="02">
                   </a>
                   <div class="card-hover">
@@ -244,22 +237,24 @@
                           alt="іконка пошуку">
                       </a>
                     </div>
-                    <a href="#" class="card-hover__button"><span>shop now</span></a>
+                    <a href="#" class="card-hover__button"><span>shop
+                        now</span></a>
                   </div>
                 </div>
-                <div class="card-subscribe__bottom">
-                  <a href="#" class="card-subscribe__name">Nike Sportswear Futura Luxe</a>
-                  <div class="card-subscribe__wrap">
-                    <a href="#" class="card-subscribe__category">Bag</a>
-                    <div class="card-subscribe__price price-card-subscribe">
-                      <div class="price-card-subscribe__main">$130.00</div>
+                <div class="card-product__bottom">
+                  <a href="#" class="card-product__name">Nike Sportswear
+                    Futura Luxe</a>
+                  <div class="card-product__wrap">
+                    <a href="#" class="card-product__category">Bag</a>
+                    <div class="card-product__price">
+                      <div class="card-product__main">$130.00</div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="subscribe__card card-subscribe">
-                <div class="card-subscribe__top">
-                  <a href="#" class="card-subscribe__image">
+              <div class="subscribe__card-product card-product">
+                <div class="card-product__top">
+                  <a href="#" class="card-product__image">
                     <img src="img/subscribe/03.webp" alt="03">
                   </a>
                   <div class="card-hover">
@@ -273,25 +268,28 @@
                           alt="іконка пошуку">
                       </a>
                     </div>
-                    <a href="#" class="card-hover__button"><span>shop now</span></a>
+                    <a href="#" class="card-hover__button"><span>shop
+                        now</span></a>
                   </div>
                 </div>
-                <div class="card-subscribe__bottom">
-                  <a href="#" class="card-subscribe__name">Geometric print Scarf</a>
-                  <div class="card-subscribe__wrap">
-                    <a href="#" class="card-subscribe__category">scarf</a>
-                    <div class="card-subscribe__price price-card-subscribe">
-                      <div class="price-card-subscribe__main">$53.00</div>
+                <div class="card-product__bottom">
+                  <a href="#" class="card-product__name">Geometric print
+                    Scarf</a>
+                  <div class="card-product__wrap">
+                    <a href="#" class="card-product__category">scarf</a>
+                    <div class="card-product__price">
+                      <div class="card-product__main">$53.00</div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="subscribe__card card-subscribe">
+              <div class="subscribe__card-product card-product">
                 <div class="card-labels">
-                  <div class="card-labels__label card-labels__label--dark">sale</div>
+                  <div
+                    class="card-labels__label card-labels__label--dark">sale</div>
                 </div>
-                <div class="card-subscribe__top">
-                  <a href="#" class="card-subscribe__image">
+                <div class="card-product__top">
+                  <a href="#" class="card-product__image">
                     <img src="img/subscribe/04.webp" alt="04">
                   </a>
                   <div class="card-hover">
@@ -305,26 +303,29 @@
                           alt="іконка пошуку">
                       </a>
                     </div>
-                    <a href="#" class="card-hover__button"><span>shop now</span></a>
+                    <a href="#" class="card-hover__button"><span>shop
+                        now</span></a>
                   </div>
                 </div>
-                <div class="card-subscribe__bottom">
-                  <a href="#" class="card-subscribe__name">Yellow Reserved Hoodie</a>
-                  <div class="card-subscribe__wrap">
-                    <a href="#" class="card-subscribe__category">Dress</a>
-                    <div class="card-subscribe__price price-card-subscribe">
-                      <div class="price-card-subscribe__main">$364.00</div>
-                      <div class="price-card-subscribe__sale">$155.00</div>
+                <div class="card-product__bottom">
+                  <a href="#" class="card-product__name">Yellow Reserved
+                    Hoodie</a>
+                  <div class="card-product__wrap">
+                    <a href="#" class="card-product__category">Dress</a>
+                    <div class="card-product__price">
+                      <div class="card-product__main">$364.00</div>
+                      <div class="card-product__sale">$155.00</div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="subscribe__card card-subscribe">
+              <div class="subscribe__card-product card-product">
                 <div class="card-labels">
-                  <div class="card-labels__label card-labels__label--red">hot</div>
+                  <div
+                    class="card-labels__label card-labels__label--red">hot</div>
                 </div>
-                <div class="card-subscribe__top">
-                  <a href="#" class="card-subscribe__image">
+                <div class="card-product__top">
+                  <a href="#" class="card-product__image">
                     <img src="img/subscribe/05.webp" alt="05">
                   </a>
                   <div class="card-hover">
@@ -338,25 +339,27 @@
                           alt="іконка пошуку">
                       </a>
                     </div>
-                    <a href="#" class="card-hover__button"><span>shop now</span></a>
+                    <a href="#" class="card-hover__button"><span>shop
+                        now</span></a>
                   </div>
                 </div>
-                <div class="card-subscribe__bottom">
-                  <a href="#" class="card-subscribe__name">Basic Dress Green</a>
-                  <div class="card-subscribe__wrap">
-                    <a href="#" class="card-subscribe__category">Dress</a>
-                    <div class="card-subscribe__price price-card-subscribe">
-                      <div class="price-card-subscribe__main">$236.00</div>
+                <div class="card-product__bottom">
+                  <a href="#" class="card-product__name">Basic Dress Green</a>
+                  <div class="card-product__wrap">
+                    <a href="#" class="card-product__category">Dress</a>
+                    <div class="card-product__price">
+                      <div class="card-product__main">$236.00</div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="subscribe__card card-subscribe">
+              <div class="subscribe__card-product card-product">
                 <div class="card-labels">
-                  <div class="card-labels__label card-labels__label--dark">sale</div>
+                  <div
+                    class="card-labels__label card-labels__label--dark">sale</div>
                 </div>
-                <div class="card-subscribe__top">
-                  <a href="#" class="card-subscribe__image">
+                <div class="card-product__top">
+                  <a href="#" class="card-product__image">
                     <img src="img/subscribe/06.webp" alt="06">
                   </a>
                   <div class="card-hover">
@@ -370,23 +373,25 @@
                           alt="іконка пошуку">
                       </a>
                     </div>
-                    <a href="#" class="card-hover__button"><span>shop now</span></a>
+                    <a href="#" class="card-hover__button"><span>shop
+                        now</span></a>
                   </div>
                 </div>
-                <div class="card-subscribe__bottom">
-                  <a href="#" class="card-subscribe__name">Nike Air Zoom Pegasus</a>
-                  <div class="card-subscribe__wrap">
-                    <a href="#" class="card-subscribe__category">shoe</a>
-                    <div class="card-subscribe__price price-card-subscribe">
-                      <div class="price-card-subscribe__main">$220.00</div>
-                      <div class="price-card-subscribe__sale">$198.00</div>
+                <div class="card-product__bottom">
+                  <a href="#" class="card-product__name">Nike Air Zoom
+                    Pegasus</a>
+                  <div class="card-product__wrap">
+                    <a href="#" class="card-product__category">shoe</a>
+                    <div class="card-product__price">
+                      <div class="card-product__main">$220.00</div>
+                      <div class="card-product__sale">$198.00</div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="subscribe__card card-subscribe">
-                <div class="card-subscribe__top">
-                  <a href="#" class="card-subscribe__image">
+              <div class="subscribe__card-product card-product">
+                <div class="card-product__top">
+                  <a href="#" class="card-product__image">
                     <img src="img/subscribe/07.webp" alt="07">
                   </a>
                   <div class="card-hover">
@@ -400,22 +405,23 @@
                           alt="іконка пошуку">
                       </a>
                     </div>
-                    <a href="#" class="card-hover__button"><span>shop now</span></a>
+                    <a href="#" class="card-hover__button"><span>shop
+                        now</span></a>
                   </div>
                 </div>
-                <div class="card-subscribe__bottom">
-                  <a href="#" class="card-subscribe__name">Nike Repel Miler</a>
-                  <div class="card-subscribe__wrap">
-                    <a href="#" class="card-subscribe__category">Dress</a>
-                    <div class="card-subscribe__price price-card-subscribe">
-                      <div class="price-card-subscribe__main">$120.50</div>
+                <div class="card-product__bottom">
+                  <a href="#" class="card-product__name">Nike Repel Miler</a>
+                  <div class="card-product__wrap">
+                    <a href="#" class="card-product__category">Dress</a>
+                    <div class="card-product__price">
+                      <div class="card-product__main">$120.50</div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="subscribe__card card-subscribe">
-                <div class="card-subscribe__top">
-                  <a href="#" class="card-subscribe__image">
+              <div class="subscribe__card-product card-product">
+                <div class="card-product__top">
+                  <a href="#" class="card-product__image">
                     <img src="img/subscribe/08.webp" alt="08">
                   </a>
                   <div class="card-hover">
@@ -429,20 +435,366 @@
                           alt="іконка пошуку">
                       </a>
                     </div>
-                    <a href="#" class="card-hover__button"><span>shop now</span></a>
+                    <a href="#" class="card-hover__button"><span>shop
+                        now</span></a>
                   </div>
                 </div>
-                <div class="card-subscribe__bottom">
-                  <a href="#" class="card-subscribe__name">Nike Sportswear Futura Luxe</a>
-                  <div class="card-subscribe__wrap">
-                    <a href="#" class="card-subscribe__category">Glasses</a>
-                    <div class="card-subscribe__price price-card-subscribe">
-                      <div class="price-card-subscribe__main">$160.00</div>
+                <div class="card-product__bottom">
+                  <a href="#" class="card-product__name">Nike Sportswear
+                    Futura Luxe</a>
+                  <div class="card-product__wrap">
+                    <a href="#" class="card-product__category">Glasses</a>
+                    <div class="card-product__price">
+                      <div class="card-product__main">$160.00</div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+          </div>
+        </section>
+        <section class="zara">
+          <div class="zara__container">
+            <div class="zara__wrap">
+              <div class="zara__Logo"><img src="img/zara/zara-logo.png"
+                  alt="zara logo"></div>
+              <div class="zara__text">
+                <p>
+                  Lustrous yet understated. The new evening
+                  wear collection exclusively offered at the
+                  reopened Giorgio Armani boutique in Los
+                  Angeles.
+                </p>
+              </div>
+              <a href="#" class="zara__button button button--white">see
+                collection</a>
+            </div>
+          </div>
+        </section>
+        <section class="best">
+          <div class="best__container">
+            <h2 class="best__title title title--margin">Best sellers</h2>
+            <div class="best__filter filter">
+              <ul class="filter__list">
+                <li class="filter__item">
+                  <a class="filter__link filter__link--active"
+                    href="#">all products</a>
+                </li>
+                <li class="filter__item">
+                  <a class="filter__link" href="#">t-shirt</a>
+                </li>
+                <li class="filter__item">
+                  <a class="filter__link" href="#">hoodies</a>
+                </li>
+                <li class="filter__item">
+                  <a class="filter__link" href="#">jacket</a>
+                </li>
+              </ul>
+              <button class="filter__button"><span>show all</span></button>
+            </div>
+            <div class="best__wrap-card wrap-card">
+              <div class="wrap-card__arrows">
+                <button class="wrap-card__arrow wrap-card__arrow--left"></button>
+                <button class="wrap-card__arrow"></button>
+              </div>
+              <div class="best__card-product card-product">
+                <div class="card-labels">
+                  <div
+                    class="card-labels__label card-labels__label--red">hot</div>
+                </div>
+                <div class="card-product__top">
+                  <a href="#" class="card-product__image">
+                    <img src="img/subscribe/05.webp" alt="05">
+                  </a>
+                  <div class="card-hover">
+                    <div class="card-hover__icons">
+                      <a class="card-hover__icon" href="#">
+                        <img src="img/icons/heart-white.svg"
+                          alt="іконка сподобалося">
+                      </a>
+                      <a class="card-hover__icon" href="#">
+                        <img src="img/icons/search-white.svg"
+                          alt="іконка пошуку">
+                      </a>
+                    </div>
+                    <a href="#" class="card-hover__button"><span>shop
+                        now</span></a>
+                  </div>
+                </div>
+                <div class="card-product__bottom">
+                  <a href="#" class="card-product__name">Basic Dress Green</a>
+                  <div class="card-product__wrap">
+                    <a href="#" class="card-product__category">Dress</a>
+                    <div class="card-product__price">
+                      <div class="card-product__main">$236.00</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="best__card-product card-product">
+                <div class="card-product__top">
+                  <a href="#" class="card-product__image">
+                    <img src="img/subscribe/02.webp" alt="02">
+                  </a>
+                  <div class="card-hover">
+                    <div class="card-hover__icons">
+                      <a class="card-hover__icon" href="#">
+                        <img src="img/icons/heart-white.svg"
+                          alt="іконка сподобалося">
+                      </a>
+                      <a class="card-hover__icon" href="#">
+                        <img src="img/icons/search-white.svg"
+                          alt="іконка пошуку">
+                      </a>
+                    </div>
+                    <a href="#" class="card-hover__button"><span>shop
+                        now</span></a>
+                  </div>
+                </div>
+                <div class="card-product__bottom">
+                  <a href="#" class="card-product__name">Nike Sportswear
+                    Futura Luxe</a>
+                  <div class="card-product__wrap">
+                    <a href="#" class="card-product__category">Bag</a>
+                    <div class="card-product__price">
+                      <div class="card-product__main">$130.00</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="best__card-product card-product">
+                <div class="card-labels">
+                  <div
+                    class="card-labels__label card-labels__label--dark">sale</div>
+                </div>
+                <div class="card-product__top">
+                  <a href="#" class="card-product__image">
+                    <img src="img/subscribe/04.webp" alt="04">
+                  </a>
+                  <div class="card-hover">
+                    <div class="card-hover__icons">
+                      <a class="card-hover__icon" href="#">
+                        <img src="img/icons/heart-white.svg"
+                          alt="іконка сподобалося">
+                      </a>
+                      <a class="card-hover__icon" href="#">
+                        <img src="img/icons/search-white.svg"
+                          alt="іконка пошуку">
+                      </a>
+                    </div>
+                    <a href="#" class="card-hover__button"><span>shop
+                        now</span></a>
+                  </div>
+                </div>
+                <div class="card-product__bottom">
+                  <a href="#" class="card-product__name">Yellow Reserved
+                    Hoodie</a>
+                  <div class="card-product__wrap">
+                    <a href="#" class="card-product__category">Dress</a>
+                    <div class="card-product__price">
+                      <div class="card-product__main">$364.00</div>
+                      <div class="card-product__sale">$155.00</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="best__card-product card-product">
+                <div class="card-product__top">
+                  <a href="#" class="card-product__image">
+                    <img src="img/subscribe/06.webp" alt="06">
+                  </a>
+                  <div class="card-hover">
+                    <div class="card-hover__icons">
+                      <a class="card-hover__icon" href="#">
+                        <img src="img/icons/heart-white.svg"
+                          alt="іконка сподобалося">
+                      </a>
+                      <a class="card-hover__icon" href="#">
+                        <img src="img/icons/search-white.svg"
+                          alt="іконка пошуку">
+                      </a>
+                    </div>
+                    <a href="#" class="card-hover__button"><span>shop
+                        now</span></a>
+                  </div>
+                </div>
+                <div class="card-product__bottom">
+                  <a href="#" class="card-product__name">Nike Air Zoom Pegasus</a>
+                  <div class="card-product__wrap">
+                    <a href="#" class="card-product__category">shoe</a>
+                    <div class="card-product__price">
+                      <div class="card-product__main">$220.00</div>
+                      <div class="card-product__sale">$198.00</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="best__card-product card-product">
+                <div class="card-labels">
+                  <div
+                    class="card-labels__label card-labels__label--red">hot</div>
+                </div>
+                <div class="card-product__top">
+                  <a href="#" class="card-product__image">
+                    <img src="img/subscribe/05.webp" alt="05">
+                  </a>
+                  <div class="card-hover">
+                    <div class="card-hover__icons">
+                      <a class="card-hover__icon" href="#">
+                        <img src="img/icons/heart-white.svg"
+                          alt="іконка сподобалося">
+                      </a>
+                      <a class="card-hover__icon" href="#">
+                        <img src="img/icons/search-white.svg"
+                          alt="іконка пошуку">
+                      </a>
+                    </div>
+                    <a href="#" class="card-hover__button"><span>shop
+                        now</span></a>
+                  </div>
+                </div>
+                <div class="card-product__bottom">
+                  <a href="#" class="card-product__name">Basic Dress Green</a>
+                  <div class="card-product__wrap">
+                    <a href="#" class="card-product__category">Dress</a>
+                    <div class="card-product__price">
+                      <div class="card-product__main">$236.00</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="best__card-product card-product">
+                <div class="card-product__top">
+                  <a href="#" class="card-product__image">
+                    <img src="img/subscribe/02.webp" alt="02">
+                  </a>
+                  <div class="card-hover">
+                    <div class="card-hover__icons">
+                      <a class="card-hover__icon" href="#">
+                        <img src="img/icons/heart-white.svg"
+                          alt="іконка сподобалося">
+                      </a>
+                      <a class="card-hover__icon" href="#">
+                        <img src="img/icons/search-white.svg"
+                          alt="іконка пошуку">
+                      </a>
+                    </div>
+                    <a href="#" class="card-hover__button"><span>shop
+                        now</span></a>
+                  </div>
+                </div>
+                <div class="card-product__bottom">
+                  <a href="#" class="card-product__name">Nike Sportswear
+                    Futura Luxe</a>
+                  <div class="card-product__wrap">
+                    <a href="#" class="card-product__category">Bag</a>
+                    <div class="card-product__price">
+                      <div class="card-product__main">$130.00</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="best__card-product card-product">
+                <div class="card-labels">
+                  <div
+                    class="card-labels__label card-labels__label--dark">sale</div>
+                </div>
+                <div class="card-product__top">
+                  <a href="#" class="card-product__image">
+                    <img src="img/subscribe/04.webp" alt="04">
+                  </a>
+                  <div class="card-hover">
+                    <div class="card-hover__icons">
+                      <a class="card-hover__icon" href="#">
+                        <img src="img/icons/heart-white.svg"
+                          alt="іконка сподобалося">
+                      </a>
+                      <a class="card-hover__icon" href="#">
+                        <img src="img/icons/search-white.svg"
+                          alt="іконка пошуку">
+                      </a>
+                    </div>
+                    <a href="#" class="card-hover__button"><span>shop
+                        now</span></a>
+                  </div>
+                </div>
+                <div class="card-product__bottom">
+                  <a href="#" class="card-product__name">Yellow Reserved
+                    Hoodie</a>
+                  <div class="card-product__wrap">
+                    <a href="#" class="card-product__category">Dress</a>
+                    <div class="card-product__price">
+                      <div class="card-product__main">$364.00</div>
+                      <div class="card-product__sale">$155.00</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="best__card-product card-product">
+                <div class="card-product__top">
+                  <a href="#" class="card-product__image">
+                    <img src="img/subscribe/07.webp" alt="07">
+                  </a>
+                  <div class="card-hover">
+                    <div class="card-hover__icons">
+                      <a class="card-hover__icon" href="#">
+                        <img src="img/icons/heart-white.svg"
+                          alt="іконка сподобалося">
+                      </a>
+                      <a class="card-hover__icon" href="#">
+                        <img src="img/icons/search-white.svg"
+                          alt="іконка пошуку">
+                      </a>
+                    </div>
+                    <a href="#" class="card-hover__button"><span>shop
+                        now</span></a>
+                  </div>
+                </div>
+                <div class="card-product__bottom">
+                  <a href="#" class="card-product__name">Nike Repel Miler</a>
+                  <div class="card-product__wrap">
+                    <a href="#" class="card-product__category">Dress</a>
+                    <div class="card-product__price">
+                      <div class="card-product__main">$120.50</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="follow">
+          <div class="follow__container">
+            <h2 class="follow__title title">Follow products and discounts on Instagram</h2>
+            <div class="follow__wrap">
+              <a href="#" class="follow__item">
+                <img src="img/follow/01.jpg" alt="01">
+              </a>
+              <a href="#" class="follow__item">
+                <img src="img/follow/02.jpg" alt="02">
+              </a>
+              <a href="#" class="follow__item">
+                <img src="img/follow/03.jpg" alt="03">
+              </a>
+              <a href="#" class="follow__item">
+                <img src="img/follow/04.jpg" alt="04">
+              </a>
+              <a href="#" class="follow__item">
+                <img src="img/follow/05.jpg" alt="05">
+              </a>
+              <a href="#" class="follow__item">
+                <img src="img/follow/06.jpg" alt="06">
+              </a>
+            </div>
+            <form class="follow__form form-follow" method="POST" action="#">
+              <fieldset class="form-follow__fieldset">
+                <legend class="form-follow__title title">Or subscribe to the newsletter</legend>
+                <div class="form-follow__wrap">
+                  <input required placeholder="Email address..." class="form-follow__email" type="email">
+                  <button class="form-follow__button" type="submit">SUBMIT</button>
+                </div>
+              </fieldset>
+            </form>
           </div>
         </section>
       </main>
@@ -507,7 +859,8 @@
               <div class="column-top-footer__lable">ABOUT US</div>
               <ul class="column-top-footer__list">
                 <li class="column-top-footer__item">
-                  <a class="column-top-footer__link" href="#">Our Producers</a>
+                  <a class="column-top-footer__link" href="#">Our
+                    Producers</a>
                 </li>
                 <li class="column-top-footer__item">
                   <a class="column-top-footer__link" href="#">Sitemap</a>
