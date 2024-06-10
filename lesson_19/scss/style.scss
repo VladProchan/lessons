@@ -139,8 +139,17 @@ body {
     padding-right: toRem(14);
     font-weight: 400;
   }
+  &__name,&__remainder{
+    transition: color 0.3s;
+    @media (any-hover: hover){
+      &:hover{
+        color: #ff6f61;
+      }
+    }
+  }
   &__name {
     font-weight: 600;
+
   }
   &__remainder {
     font-weight: 600;

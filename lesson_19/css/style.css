@@ -350,6 +350,15 @@ body {
     font-weight: 400;
   }
 }
+.card-hover__name, .card-hover__remainder {
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+@media (any-hover: hover) {
+  .card-hover__name:hover, .card-hover__remainder:hover {
+    color: #ff6f61;
+  }
+}
 .card-hover__name {
   font-weight: 600;
 }
