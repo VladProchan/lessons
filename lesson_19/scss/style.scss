@@ -1,0 +1,1262 @@
+@use "sass:math";
+// підключення онулення
+@import "_reset.scss";
+// Підключення шрифтів
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:regular,600&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,regular,500,700&display=swap");
+@import "_fonts.scss";
+// відключення міксінів
+@import "_mixins.scss";
+
+// Налаштування адаптивної сітки ==============================================================================
+
+// Мінімальна ширина сторінки
+$minWidth: 320;
+// Ширина полотна (макету)
+$maxWidth: 1920;
+// Ширина обмежуючого контейнера (0 = немає обмеження)
+$maxWidthContainer: 1320;
+// Загальний відступ у контейнера
+// (30 = по 15px ліворуч і праворуч, 0 = немає відступу)
+$containerPadding: 30;
+
+// Ширина спрацьовування першого брейкпоінту
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+// ===================================================================================================
+
+body {
+  color: #000;
+  font-family: "Open Sans", sans-serif;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: clip;
+  display: flex;
+  flex-direction: column;
+  main {
+    flex: 1 1 auto;
+  }
+}
+
+[class*="__container"] {
+  max-width: #{$containerWidth}px;
+  margin: 0 auto;
+  padding: 0 math.div($containerPadding, 2) + px;
+}
+//Готові блоки====================================================================================================
+.button {
+  color: #fff;
+  font-size: toRem(29);
+  @include adaptiveValue("font-size", 29, 20, 0, $containerWidth, 767.98);
+  @include adaptiveValue("padding-top", 19, 10, 0, $containerWidth, 767.98);
+  @include adaptiveValue("padding-bottom", 19, 10, 0, $containerWidth, 767.98);
+  @include adaptiveValue("padding-left", 26, 20, 0, $containerWidth, 767.98);
+  @include adaptiveValue("padding-right", 26, 20, 0, $containerWidth, 767.98);
+  text-transform: capitalize;
+  background-color: #1e2832;
+  transition: background-color 0.3s;
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: #ff6f65;
+    }
+  }
+  &--icon {
+    span {
+      display: flex;
+      align-items: center;
+      column-gap: toRem(8);
+      &::before {
+        content: "";
+        width: 30px;
+        height: 30px;
+        background: url("../img/icons/shop-white.svg") center no-repeat;
+      }
+    }
+  }
+  &--white {
+    color: #1e2832;
+    background-color: #fff;
+  }
+}
+
+.card-labels {
+  position: absolute;
+  top: toRem(22);
+  left: 0;
+  z-index: 5;
+  &__label {
+    font-size: toRem(12);
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: toRem(6) toRem(12);
+    color: #fff;
+    background-color: #4cc76a;
+    &:not(:last-child) {
+      margin-bottom: toRem(10);
+    }
+    &--dark {
+      background-color: #1e2832;
+    }
+    &--red {
+      background-color: #ff6f61;
+    }
+  }
+}
+.title {
+  @include adaptiveValue("font-size", 50, 30, 0, $containerWidth, 767.98);
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  text-transform: capitalize;
+  text-align: center;
+}
+.card-hover {
+  position: absolute;
+  @media (min-width: toEm(991.98)) {
+    opacity: 0;
+  }
+  left: 0;
+  bottom: 0;
+  opacity: 1;
+  padding-top: toRem(15);
+  padding-bottom: toRem(15);
+  padding-left: toRem(14);
+  padding-right: toRem(14);
+  background-color: #1e2832;
+  width: 100%;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-transform: capitalize;
+  transition: all 0.3s;
+  line-height: 1.38;
+  @media (max-width: toEm(991.98)) {
+    padding-top: toRem(10);
+    padding-bottom: toRem(10);
+    padding-left: toRem(14);
+    padding-right: toRem(14);
+    font-weight: 400;
+  }
+  &__name,&__remainder{
+    transition: color 0.3s;
+    @media (any-hover: hover){
+      &:hover{
+        color: #ff6f61;
+      }
+    }
+  }
+  &__name {
+    font-weight: 600;
+
+  }
+  &__remainder {
+    font-weight: 600;
+  }
+  &__icons {
+    display: flex;
+    align-items: center;
+    column-gap: toRem(21);
+  }
+  &__icon {
+    width: toRem(20);
+    height: toRem(19);
+    &--heart{
+      background: url('../img/icons/heart-white.svg') center / cover no-repeat;
+      transition: background 0.3s;
+      @media (any-hover: hover){
+        &:hover{
+          background: url('../img/icons/heart-red.svg') center / cover no-repeat;
+        }
+      }
+    }
+    &--search{
+      background: url('../img/icons/search-white.svg') center / cover no-repeat;
+      transition: background 0.3s;
+      @media (any-hover: hover){
+        &:hover{
+          background: url('../img/icons/search-red.svg') center / cover no-repeat;
+        }
+      }
+    }
+  }
+  &__button {
+    span {
+      display: flex;
+      align-items: center;
+      column-gap: toRem(8);
+      transition: color 0.3s;
+      font-weight: 400;
+      &::before {
+        content: "";
+        width: toRem(25);
+        height: toRem(25);
+        background: url("../img/icons/shop-white.svg") center / contain
+          no-repeat;
+        transition: background 0.3s;
+      }
+      @media (any-hover: hover) {
+        &:hover {
+          color: #ff6f61;
+          &::before {
+            background: url("../img/icons/shop-red.svg") center / contain
+              no-repeat;
+          }
+        }
+      }
+    }
+  }
+}
+.card-product {
+  position: relative;
+  @media (any-hover: hover) {
+    &:hover {
+      .card-hover {
+        opacity: 1;
+      }
+    }
+  }
+  &__top {
+    position: relative;
+    margin-bottom: toRem(18);
+  }
+  &__image {
+    width: 100%;
+    img {
+      width: 100%;
+      object-fit: cover;
+      aspect-ratio: 312 / 400;
+    }
+  }
+
+  &__bottom {
+    padding: 0 toRem(10);
+  }
+
+  &__name {
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-bottom: toRem(16);
+  }
+
+  &__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: toRem(30);
+    justify-content: space-between;
+  }
+
+  &__category {
+    color: rgba(0, 0, 0, 0.5);
+    text-transform: capitalize;
+    font-weight: 600;
+  }
+
+  &__price {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: toRem(12);
+    align-items: end;
+    &:has(.card-product__sale) {
+      .card-product__main {
+        text-decoration: line-through;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: toRem(14);
+      }
+    }
+    font-weight: 600;
+  }
+  &__main {
+  }
+
+  &__sale {
+    color: #ff6f61;
+  }
+  &--best {
+  }
+}
+.wrap-card {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-auto-rows: 1fr;
+  gap: toRem(24);
+  @media (min-width: toEm(767.98)) {
+    &__arrows {
+      position: absolute;
+      top: 38%;
+      z-index: 2;
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      padding: 0 toRem(14);
+    }
+    &__arrow {
+      width: toRem(32);
+      height: toRem(32);
+      background: url("../img/icons/arrow-slider.svg") center no-repeat;
+      transition: background 0.3s;
+      &--left {
+        transform: rotate(180deg);
+      }
+      @media (any-hover: hover) {
+        &:hover {
+          background: url("../img/icons/arrow-slider-red.svg") center no-repeat;
+        }
+      }
+    }
+  }
+  @media (max-width: toEm(767.98)) {
+    &__arrows {
+      display: none;
+    }
+  }
+}
+.filter {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: toRem(30);
+  row-gap: toRem(5);
+  justify-content: space-between;
+  margin-bottom: toRem(35);
+  @include adaptiveValue("margin-bottom", 35, 20, 0, $containerWidth, 479.98);
+  &__list {
+    @media (max-width: toEm(767.98)) {
+      display: none;
+    }
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: toRem(40);
+    row-gap: toRem(5);
+  }
+
+  &__item {
+  }
+
+  &__link {
+    text-transform: capitalize;
+    color: rgba(0, 0, 0, 0.5);
+    font-weight: 600;
+    transition: color 0.3s;
+    @media (any-hover: hover) {
+      &:hover {
+        color: #ff6f61;
+      }
+    }
+    &--active {
+      color: #000;
+      @media (any-hover: hover) {
+        &:hover {
+          color: #000;
+        }
+      }
+    }
+  }
+  &__button {
+    background-color: #1e2832;
+    padding: toRem(5) toRem(15);
+    color: #fff;
+    text-transform: capitalize;
+    transition: background-color 0.3s;
+    line-height: 1.4;
+    &--icon {
+      span {
+        display: flex;
+        align-items: center;
+        column-gap: toRem(4);
+        &::before {
+          content: "";
+          width: toRem(20);
+          height: toRem(20);
+          background: url("../img/icons/filter.svg") center no-repeat;
+        }
+      }
+    }
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: #ff6f61;
+      }
+    }
+    margin-left: auto;
+  }
+}
+//HEADER====================================================================================================
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50;
+  background-color: #f4f4f5;
+  &__container {
+  }
+
+  &__top {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    @media (max-width: toEm(767.98)) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    column-gap: toRem(15);
+    row-gap: toRem(5);
+    align-items: center;
+    @include adaptiveValue("padding-top", 31, 15, 0, $containerWidth, 479.98);
+    @include adaptiveValue(
+      "padding-bottom",
+      25,
+      15,
+      0,
+      $containerWidth,
+      479.98
+    );
+
+    @media (min-width: toEm(767.98)) {
+      border-bottom: 1px solid #e3e3e3;
+    }
+  }
+
+  &__bottom {
+    @include adaptiveValue("padding-top", 30, 15, 0, $containerWidth, 767.98);
+    @include adaptiveValue(
+      "padding-bottom",
+      30,
+      15,
+      0,
+      $containerWidth,
+      767.98
+    );
+    @media (max-width: toEm(767.98)) {
+      display: none;
+    }
+  }
+}
+.top-header {
+  &__search {
+    justify-self: left;
+    transition: transform 0.3s;
+    width: toRem(20);
+    height: toRem(20);
+    background: url('../img/icons/search.svg') center / contain no-repeat;
+    transition: background 0.3s;
+    @media (max-width: toEm(767.98)) {
+      width: toRem(25);
+      height: toRem(25);
+    }
+    @media (any-hover: hover) {
+      &:hover {
+        background: url('../img/icons/search-red.svg') center / contain no-repeat;
+      }
+    }
+  }
+
+  &__logo {
+    max-width: toRem(180);
+    img {
+      width: 100%;
+      height: 100%;
+      aspect-ratio: 180 / 34;
+      object-fit: contain;
+    }
+    @media (min-width: toEm(767.98)) {
+      margin: 0 auto;
+    }
+  }
+
+  &__other {
+    display: flex;
+    align-items: center;
+    column-gap: toRem(22);
+    @include adaptiveValue("column-gap", 22, 10, 0, 767.98, 479.98);
+    row-gap: toRem(5);
+    justify-self: end;
+  }
+}
+.other {
+  &__link {
+    font-size: toRem(18);
+    text-transform: capitalize;
+    color: #1e2832;
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    align-items: center;
+    column-gap: toRem(8);
+    transition: color 0.3s;
+    &--account{
+      &::before{
+        content:'';
+        width: toRem(20);
+        height: toRem(20);
+        background: url('../img/icons/account.svg') center / contain no-repeat;
+        transition: background 0.3s;
+        @media (max-width: toEm(767.98)) {
+          width: toRem(25);
+          height: toRem(25);
+        }
+      }
+      @media (any-hover: hover){
+        &:hover{
+          &::before{
+            background: url('../img/icons/account-red.svg') center / contain no-repeat;
+          }
+        }
+      }
+    }
+    &--shop{
+      &::before{
+        content:'';
+        width: toRem(20);
+        height: toRem(20);
+        background: url('../img/icons/shop-darck.svg') center / contain no-repeat;
+        transition: background 0.3s;
+        @media (max-width: toEm(767.98)) {
+          width: toRem(25);
+          height: toRem(25);
+        }
+      }
+      @media (any-hover: hover){
+        &:hover{
+          &::before{
+            background: url('../img/icons/shop-red.svg') center / contain no-repeat;
+          }
+        }
+      }
+    }
+    @media (any-hover: hover){
+      &:hover{
+        color: #ff6f61;
+      }
+    }
+    @media (max-width: toEm(767.98)) {
+      span {
+        display: none;
+      }
+    }
+
+    @media (min-width: toEm(767.98)) {
+      &--search {
+        display: none;
+      }
+      &--menu {
+        display: none;
+      }
+    }
+  }
+
+  &__image {
+    width: toRem(20);
+    transition: transform 0.3s;
+    img{
+      width: 100%;
+    }
+    @media (max-width: toEm(767.98)) {
+      width: toRem(25);
+    }
+  }
+}
+.bottom-header {
+  &__nav {
+  }
+}
+.nav {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    column-gap: toRem(30);
+    row-gap: toRem(5);
+  }
+
+  &__item {
+  }
+
+  &__link {
+    text-transform: capitalize;
+    line-height: 1.5; /* 24/16 */
+    display: flex;
+    flex-direction: column;
+    transition: color 0.3s;
+    @media (any-hover: hover){
+      &:hover{
+        color: #ff6f61;
+      }
+    }
+  }
+}
+//HERO====================================================================================================
+.hero {
+  background-color: rgba(30, 40, 50, 0.05);
+  position: relative;
+  @media (min-width: toEm(767.98)) {
+    @include adaptiveValue("padding-top", 255, 150, 0, $containerWidth, 479.98);
+  }
+  @media (max-width: toEm(767.98)) {
+    padding-top: toRem(100);
+  }
+  @include adaptiveValue("padding-bottom", 80, 40, 0, $containerWidth, 479.98);
+  @media (min-width: toEm(767.98)) {
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 12.7%;
+      left: 0;
+      width: 6.8%;
+      height: 11.8%;
+      background: url("../img/hero/decor-left.svg") 0 0 / contain no-repeat;
+      z-index: -1;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 18.4%;
+      right: 0;
+      z-index: -1;
+      width: 10.1%;
+      height: 36.6%;
+      background: url("../img/hero/decor-right.svg") right / contain no-repeat;
+    }
+  }
+
+  &__container {
+  }
+
+  &__wrap {
+    display: flex;
+    column-gap: toRem(30);
+    @media (max-width: toEm(767.98)) {
+      flex-direction: column;
+      row-gap: toRem(30);
+    }
+  }
+
+  &__content {
+    flex: 0 1 51.6%;
+    font-family: "Roboto", sans-serif;
+  }
+
+  &__media {
+    flex: 1 1 auto;
+  }
+}
+.content-hero {
+  display: flex;
+  align-items: center;
+  &__shell {
+    display: flex;
+    flex-direction: column;
+  }
+  &__title {
+    @include adaptiveValue("margin-bottom", 52, 20, 0, $containerWidth, 767.98);
+    @include adaptiveValue("font-size", 74, 40, 0, $containerWidth, 767.98);
+    line-height: 0.74; /* 55/74 */
+    font-weight: 300;
+  }
+
+  &__subtitle {
+    @include adaptiveValue("font-size", 30, 16, 0, $containerWidth, 767.98);
+    line-height: 1.83; /* 55/30 */
+    text-transform: capitalize;
+    @include adaptiveValue("margin-bottom", 66, 20, 0, $containerWidth, 767.98);
+    display: flex;
+    flex-direction: column;
+    row-gap: toRem(15);
+  }
+
+  &__button {
+    align-self: flex-start;
+  }
+}
+
+.media-hero {
+  @media (min-width: toEm(767.98)) {
+    padding-left: toRem(68);
+  }
+  @media (max-width: toEm(767.98)) {
+    align-items: center;
+  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  &__image {
+    width: 78.5%;
+    position: relative;
+    z-index: 1;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 4.3%;
+      left: 5.5%;
+      width: 100%;
+      height: 100%;
+      border: toRem(2) solid rgba(0, 0, 0, 0.25);
+      border-radius: 35% 0 35% 0;
+      z-index: -1;
+    }
+    img {
+      aspect-ratio: 424 / 542;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      border-radius: 35% 0 35% 0;
+    }
+  }
+}
+//EXPLORE====================================================================================================
+.explore {
+  @include adaptiveValue("padding-top", 90, 20, 0, $containerWidth, 479.98);
+  @include adaptiveValue("padding-bottom", 70, 20, 0, $containerWidth, 479.98);
+  &__container {
+  }
+
+  &__brands {
+    @include adaptiveValue(
+      "padding-bottom",
+      90,
+      20,
+      0,
+      $containerWidth,
+      479.98
+    );
+  }
+  &__cards {
+    position: relative;
+  }
+
+  &__title {
+    font-family: "Roboto", sans-serif;
+    @include adaptiveValue("font-size", 34, 24, 0, $containerWidth, 767.98);
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: toRem(35);
+    @include adaptiveValue("margin-bottom", 35, 20, 0, $containerWidth, 767.98);
+    @media (min-width: toEm(1425)) {
+      position: absolute;
+      top: 50%;
+      left: toRem(-44);
+      z-index: 5;
+      writing-mode: vertical-lr;
+      height: 100%;
+      transform: rotate(180deg) translate(0, 50%);
+    }
+  }
+  &__wrap {
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(4, 1fr);
+    gap: toRem(24);
+    @media (max-width: toEm(767.98)) {
+      grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+    }
+    @media (max-width: toEm(479.98)) {
+      grid-template: repeat(2, 1fr) / repeat(1, 1fr);
+    }
+  }
+
+  &__card {
+    position: relative;
+    @media (min-width: toEm(767.98)) {
+      &:nth-child(10n + 1),
+      &:nth-child(10n + 8) {
+        grid-column: span 2;
+        grid-row: span 2;
+      }
+    }
+    &:only-child {
+      grid-column: span 4;
+      grid-row: span 2;
+    }
+  }
+}
+.brands-explore {
+  @media (max-width: toEm(767.98)) {
+    display: none;
+  }
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    // display: grid;
+    // grid-template-columns: repeat(auto-fill, minmax(toRem(200), toRem(120)));
+    column-gap: toRem(80);
+    @include adaptiveValue("column-gap", 80, 10, 0, $containerWidth, 479.98);
+    @include adaptiveValue("row-gap", 15, 5, 0, $containerWidth, 479.98);
+  }
+
+  &__item {
+    flex: 0 1 auto;
+    img {
+      width: 100%;
+      aspect-ratio: 200/70;
+      object-fit: contain;
+    }
+  }
+}
+.card-explore {
+  position: relative;
+  overflow: hidden;
+  @media (min-width: toEm(991.98)) {
+    &:hover .card-hover {
+      opacity: 1;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    img {
+      aspect-ratio: 1 / 1;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
+//SUBSCRIBE====================================================================================================
+.subscribe {
+  @include adaptiveValue("padding-top", 90, 20, 0, $containerWidth, 479.98);
+  @include adaptiveValue("padding-bottom", 140, 40, 0, $containerWidth, 479.98);
+  &__container {
+  }
+  &__title {
+    @include adaptiveValue("margin-bottom", 35, 20, 0, $containerWidth, 479.98);
+  }
+  &__filter {
+  }
+  &__wrap-card {
+  }
+  &__card-product {
+  }
+}
+
+//ZARA====================================================================================================
+.zara {
+  @include adaptiveValue("padding-top", 233, 40, 0, $containerWidth, 479.98);
+  @include adaptiveValue("padding-bottom", 93, 40, 0, $containerWidth, 479.98);
+  background: url("../img/zara/bg.jpg") toRem(-250) center no-repeat, #010204;
+  @media (max-width: toRem(1920)) {
+    background: url("../img/zara/bg.jpg") toRem(-250) center / cover no-repeat,
+      #010204;
+  }
+  @media (max-width: toRem(767.98)) {
+    background: url("../img/zara/bg.jpg") center / cover no-repeat, #010204;
+  }
+  @media (min-width: toEm(991.98)) {
+    position: relative;
+    &::after {
+      content: "";
+      top: toRem(51);
+      right: toRem(-60);
+      position: absolute;
+      @include adaptiveValue("width", 732, 146, 0, $containerWidth, 767.98);
+      @include adaptiveValue("height", 309, 62, 0, $containerWidth, 767.98);
+      background: url("../img/zara/zara-logo.png") center / contain no-repeat;
+      opacity: 0.2;
+    }
+  }
+
+  &__container {
+    display: flex;
+    justify-content: end;
+  }
+
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    row-gap: toRem(55);
+    @include adaptiveValue("row-gap", 55, 20, 0, $containerWidth, 767.98);
+    @media (min-width: toEm(767.98)) {
+      margin-right: toRem(33);
+    }
+  }
+
+  &__Logo {
+    width: toRem(191);
+    img {
+      width: 100%;
+      aspect-ratio: 191/81;
+      object-fit: contain;
+    }
+  }
+
+  &__text {
+    font-family: "Roboto", sans-serif;
+    color: #fff;
+    @media (min-width: toEm(767.98)) {
+      max-width: toRem(504);
+    }
+    font-size: toRem(26);
+    @include adaptiveValue("font-size", 26, 16, 0, $containerWidth, 767.98);
+    line-height: 1.8; /* 40/26 */
+    text-transform: capitalize;
+  }
+
+  &__button {
+    align-self: start;
+  }
+}
+.button {
+}
+.button--white {
+}
+//BEST====================================================================================================
+.best {
+  @include adaptiveValue("padding-top", 140, 40, 0, $containerWidth, 479.98);
+  @include adaptiveValue("padding-bottom", 140, 40, 0, $containerWidth, 479.98);
+  &__container {
+  }
+
+  &__title {
+    @include adaptiveValue("margin-bottom", 35, 20, 0, $containerWidth, 479.98);
+  }
+
+  &__filter {
+  }
+
+  &__wrap-card {
+    position: relative;
+    display: flex;
+    min-width: 100%;
+    column-gap: toRem(24);
+    overflow-x: auto;
+    padding-bottom: toRem(30);
+    position: relative;
+    &::-webkit-scrollbar {
+      height: toRem(12);
+    }
+    &::-webkit-scrollbar-track {
+      background: rgba(158, 158, 158, 0.5);
+      border-radius: toRem(20);
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: #ff6f61; /* колір скролбару */
+      border-radius: toRem(20); /* заокруглення скролбару */
+      border: toRem(3) solid #ff6f61; /* додає паддінги навколу скролу */
+    }
+  }
+
+  &__card-product {
+    @include adaptiveValue("min-width", 312, 290, 0, $containerWidth, 479.98);
+    padding-bottom: toRem(3);
+  }
+}
+//FOLLOW====================================================================================================
+.follow {
+  @include adaptiveValue("padding-top", 100, 40, 0, $containerWidth, 479.98);
+  @include adaptiveValue("padding-bottom", 100, 20, 0, $containerWidth, 479.98);
+  background-color: rgba(30, 40, 50, 0.05);
+  &__container {
+  }
+
+  &__title {
+    @include adaptiveValue("margin-bottom", 60, 20, 0, $containerWidth, 479.98);
+  }
+
+  &__wrap {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-auto-rows: 1fr;
+    gap: toRem(24);
+    @include adaptiveValue("margin-bottom", 70, 30, 0, $containerWidth, 479.98);
+  }
+
+  &__item {
+    width: 100%;
+    position: relative;
+    &::after {
+      content: "";
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      position: absolute;
+      width: toRem(48);
+      height: toRem(48);
+      background: url("../img/icons/instagram-white.svg") center no-repeat;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    @media (any-hover: hover) {
+      &:hover {
+        &::after,
+        &::before {
+          opacity: 1;
+        }
+      }
+    }
+    img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+    }
+  }
+
+  &__form {
+  }
+}
+.form-follow {
+  &__fieldset {
+  }
+
+  &__title {
+    @include adaptiveValue("margin-bottom", 74, 30, 0, $containerWidth, 479.98);
+  }
+
+  &__wrap {
+    display: flex;
+    justify-content: center;
+    gap: toRem(26);
+    @media (max-width: toEm(767.98)) {
+      flex-direction: column;
+    }
+  }
+
+  &__email {
+    max-width: toRem(643);
+    border-bottom: toRem(2) solid #000;
+    padding-left: toRem(15);
+    padding-right: toRem(15);
+    padding-bottom: toRem(10);
+    transition: border-bottom 0.3s;
+    &:focus {
+      outline: none;
+      border-bottom: toRem(2) solid #ff6f61;
+    }
+    &::placeholder {
+      font-weight: 600;
+      font-family: "Roboto", sans-serif;
+      text-transform: capitalize;
+      @media (max-width: toEm(767.98)) {
+        text-align: center;
+      }
+    }
+    @media (any-hover: hover) {
+      &:hover {
+        border-bottom: toRem(2) solid #ff6f61;
+      }
+    }
+  }
+
+  &__button {
+    width: toRem(91);
+    border-bottom: toRem(2) solid #000;
+    padding-bottom: toRem(10);
+    transition: color 0.3s, border-bottom 0.3s;
+    @media (max-width: toEm(767.98)) {
+      width: 100%;
+    }
+    @media (any-hover: hover) {
+      &:hover {
+        color: #ff6f61;
+        border-bottom: toRem(2) solid #ff6f61;
+      }
+    }
+  }
+}
+
+//FOOTER====================================================================================================
+.footer {
+  &__top {
+    @include adaptiveValue("padding-top", 141, 15, 0, $containerWidth, 479.98);
+    @include adaptiveValue(
+      "padding-bottom",
+      90,
+      15,
+      0,
+      $containerWidth,
+      479.98
+    );
+  }
+
+  &__bottom {
+    background-color: #1e2832;
+    padding-top: toRem(14);
+    padding-bottom: toRem(14);
+    color: #fff;
+  }
+}
+
+.top-footer {
+  &__container {
+    display: flex;
+    @media (max-width: toEm(767.98)) {
+      flex-direction: column;
+    }
+    flex-wrap: wrap;
+    justify-content: space-between;
+    column-gap: toRem(40);
+    row-gap: toRem(30);
+  }
+
+  &__main-column {
+    @media (min-width: toEm(767.98)) {
+      max-width: toRem(392);
+    }
+    display: flex;
+    flex-direction: column;
+    row-gap: toRem(32);
+    @media (max-width: toEm(767.98)) {
+      row-gap: toRem(15);
+    }
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    row-gap: toRem(22);
+    @media (max-width: toEm(767.98)) {
+      row-gap: toRem(15);
+    }
+    justify-self: center;
+  }
+}
+.main-column-top-footer {
+  &__logo {
+    max-width: toRem(180);
+    img {
+      width: 100%;
+      height: 100%;
+      aspect-ratio: 180 / 34;
+      object-fit: contain;
+    }
+  }
+
+  &__text {
+    color: rgba(30, 40, 50, 0.75);
+    line-height: 1.8;
+    text-transform: capitalize;
+  }
+
+  &__social {
+  }
+}
+.social {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: toRem(40);
+    row-gap: toRem(5);
+  }
+
+  &__item {
+  }
+
+  &__link {
+    width: toRem(20);
+    transition: transform 0.3s;
+    @media (any-hover: hover) {
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: contain;
+    }
+  }
+}
+.column-top-footer {
+  &__lable {
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: toRem(12);
+    @media (max-width: toEm(767.98)) {
+      row-gap: toRem(5);
+    }
+  }
+
+  &__item {
+  }
+
+  &__link {
+    color: #1e2832;
+    line-height: 1.5; /* 24/16 */
+    text-transform: capitalize;
+    display: flex;
+    flex-direction: column;
+    transition: color 0.3s;
+    @media (any-hover: hover){
+      &:hover{
+        color: #ff6f61;
+      }
+    }
+  }
+}
+
+.bottom-footer {
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    column-gap: toRem(15);
+    row-gap: toRem(5);
+    @media (max-width: toEm(767.98)) {
+      display: flex;
+      flex-direction: column;
+      row-gap: toRem(15);
+    }
+  }
+
+  &__address {
+    text-transform: capitalize;
+  }
+
+  &__payments {
+    justify-self: center;
+  }
+
+  &__scroll-top {
+    justify-self: end;
+    text-transform: capitalize;
+    display: flex;
+    column-gap: toRem(6);
+    @media (any-hover: hover) {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    &::after {
+      content: "";
+      width: toRem(16);
+      height: toRem(16);
+      background: url("../img/icons/to-top.svg") center no-repeat;
+    }
+  }
+}
+.payments-bottom-footer {
+  &__list {
+    display: flex;
+    gap: toRem(5);
+  }
+
+  &__item {
+  }
+
+  &__link {
+    width: toRem(43);
+    transition: transform 0.3s;
+    @media (any-hover: hover) {
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      aspect-ratio: 43 / 24;
+      object-fit: contain;
+    }
+  }
+}
