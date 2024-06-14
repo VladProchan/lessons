@@ -1,0 +1,142 @@
+@use "sass:math";
+// підключення онулення
+@import "_reset.scss";
+// Підключення шрифтів
+@import url("https://fonts.googleapis.com/css?family=JetBrains+Mono:100,200,300,regular,500,600,700,800,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic&display=swap");
+@import "_fonts.scss";
+// відключення міксінів
+@import "_mixins.scss";
+
+// Налаштування адаптивної сітки ==============================================================================
+
+// Мінімальна ширина сторінки
+$minWidth: 320;
+// Ширина полотна (макету)
+$maxWidth: 1920;
+// Ширина обмежуючого контейнера (0 = немає обмеження)
+$maxWidthContainer: 1320;
+// Загальний відступ у контейнера
+// (30 = по 15px ліворуч і праворуч, 0 = немає відступу)
+$containerPadding: 30;
+
+// Ширина спрацьовування першого брейкпоінту
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+// ===================================================================================================
+
+body {
+  color: #000;
+  font-family: "CeraPro", sans-serif;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: clip;
+  display: flex;
+  flex-direction: column;
+  main {
+    flex: 1 1 auto;
+  }
+}
+
+[class*="__container"] {
+  max-width: #{$containerWidth}px;
+  margin: 0 auto;
+  padding: 0 math.div($containerPadding, 2) + px;
+}
+//====================================================================================================
+.violet {
+  color: #c74ded;
+}
+.blue {
+  color: #18e8c6;
+}
+
+.dark-blue{
+  color: #4a83ff;
+}
+
+.orange {
+  color: #ff9100;
+}
+.yellow {
+  color: #ffe363;
+}
+.bg-code {
+  background-color: #23262e;
+  border-radius: toRem(5);
+  padding: 0 toRem(5);
+}
+.red {
+  color: #ee5d43;
+}
+
+.green {
+  color: #96e06a;
+}
+//====================================================================================================
+.header {
+  &__container {
+    border-bottom: toRem(2) solid #b4b4b4;
+    padding: toRem(30) toRem(15);
+  }
+
+  &__title {
+    @include adaptiveValue("font-size", 40, 30);
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.1;
+  }
+}
+
+//====================================================================================================
+.problem {
+  padding: toRem(15) 0;
+  &__container {
+  }
+
+  &__title {
+    @include adaptiveValue("font-size", 40, 30);
+    margin-bottom: toRem(20);
+  }
+
+  &__subtitle {
+    font-size: toRem(18);
+    margin-bottom: toRem(20);
+    line-height: 1.5;
+  }
+
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    row-gap: toRem(10);
+    background-color: #23262e;
+    padding: toRem(15);
+    border-radius: toRem(15);
+    color: #fff;
+    margin-bottom: toRem(20);
+  }
+  &__code {
+    font-family: "JetBrains Mono", sans-serif;
+    line-height: 1.5;
+  }
+
+  &__answer {
+    font-size: toRem(18);
+    line-height: 1.5;
+  }
+}
+//====================================================================================================
+.footer {
+  padding: toRem(20) 0;
+  background-color: #23262e;
+  &__container {
+  }
+
+  &__text {
+    text-align: center;
+    font-size: toRem(20);
+    color: #fff;
+    line-height: 1.5;
+  }
+}

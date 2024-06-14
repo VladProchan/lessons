@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Lesson 22</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__container">
+          <h1 class="header__title">Домашня робота до уроку №22 (Основи JavaScript. Частина №2)</h1>
+        </div>
+      </header>
+      <main class="main">
+        <section class="problem">
+          <div class="problem__container">
+            <h2 class="problem__title">Задача №1</h2>
+            <div class="problem__subtitle">Що потрапить в консоль?</div>
+            <div class="problem__wrap">
+              <code class="problem__code"><span class="violet">let</span> <span class="blue">someVar</span> <span class="red">=</span> <span class="orange">0</span></code>
+              <code class="problem__code"><span class="red">+</span><span class="red">+</span><span class="blue">someVar</span></code>
+              <code class="problem__code"><span class="violet">if</span> <span class="yellow">(</span><span class="blue">someVar</span><span class="yellow">)</span> <span class="yellow">{</span></code>
+              <code class="problem__code"><span class="orange">console</span><span>.</span><span class="yellow">log</span><span class="violet">(</span><span class="blue">someVar</span><span class="violet">)</span></code>
+              <code class="problem__code"><span class="yellow">}</span></code>
+            </div>
+            <div class="problem__answer">Правильна відповідь <code class="problem__code"><span class="bg-code"><span class="orange">1</span></span></code>. При додаванні інкременту <code class="problem__code"><span class="bg-code"><span class="red">+</span><span class="red">+</span></span></code> до 0 отримуємо число 1, і при перевірці цого в умовному вітвленні повертається значення <code class="problem__code"><span class="bg-code"><span class="orange">true</span></span></code> тому і виконується вивід значення в консоль.</div> 
+          </div>
+        </section>
+        <section class="problem">
+          <div class="problem__container">
+            <h2 class="problem__title">Задача №2</h2>
+            <div class="problem__subtitle">За допомогою циклу FOR вивести в консоль 10 рядків: Пункт№1, Пункт№2 і т.д.</div>
+            <div class="problem__wrap">
+              <code class="problem__code"><span class="violet">for</span> <span class="yellow">(</span><span class="violet">let</span> <span class="blue">i</span> <span class="red">=</span> <span class="orange">1</span><span>;</span> <span class="blue">i</span> <span class="red"><</span> <span class="orange">11</span><span>;</span> <span class="red">+</span><span class="red">+</span><span class="blue">i</span><span class="yellow">)</span><span class="yellow">{</span></code>
+              <code class="problem__code"><span class="orange">console</span><span>.</span><span class="yellow">log</span><span class="violet">(</span><span class="green">`Пункт №</span> <span class="dark-blue">${</span><span class="green">i</span><span class="dark-blue">}</span><span class="green">`</span><span class="violet">)</span></code>
+              <code class="problem__code"><span class="yellow">}</span></code>
+              <code class="problem__code">// Результат в консолі</code>
+            </div>
+          </div>
+        </section>
+        <section class="problem">
+          <div class="problem__container">
+            <h2 class="problem__title">Задача №3</h2>
+            <div class="problem__subtitle">Що потрапить в консоль?</div>
+            <div class="problem__wrap">
+              <code class="problem__code"><span class="violet">if</span> <span class="yellow">(</span><span class="orange">2</span> <span class="red">*</span> <span class="orange">20</span> <span class="red"><= </span><span class="orange">10</span> <span class="red">||</span> <span class="orange">30</span> <span class="red">/</span> <span class="orange">2</span> <span class="red"><</span> <span class="orange">5</span> <span class="red">&&</span> <span class="orange">10</span> <span class="red"><= </span><span class="green">"10"</span> <span class="red">||</span> <span class="orange">20</span> <span class="red">===</span> <span class="green">"20"</span><span class="yellow">)</span> <span class="yellow">{</span></code>
+              <code class="problem__code"><span class="orange">console</span><span>.</span><span class="yellow">log</span><span class="yellow">(</span><span class="green">'000'</span><span class="yellow">)</span></code>
+              <code class="problem__code"><span class="yellow">}</span></code>
+              <code class="problem__code">// Хід виконання</code>
+              <code class="problem__code"><span class="violet">if</span> <span class="yellow">(</span><span class="orange">2</span> <span class="red">*</span> <span class="orange">20</span> <span class="red"><= </span><span class="orange">10</span> <span class="red">||</span> <span class="orange">30</span> <span class="red">/</span> <span class="orange">2</span> <span class="red"><</span> <span class="orange">5</span> <span class="red">&&</span> <span class="orange">10</span> <span class="red"><= </span><span class="green">"10"</span> <span class="red">||</span> <span class="orange">20</span> <span class="red">===</span> <span class="green">"20"</span><span class="yellow">)</span></code>
+              <code class="problem__code"><span class="violet">if</span> <span class="yellow">(</span><span class="orange">40</span> <span class="red"><= </span><span class="orange">10</span> <span class="red">||</span> <span class="orange">15</span> <span class="red"><</span> <span class="orange">5</span> <span class="red">&&</span> <span class="orange">10</span> <span class="red"><= </span><span class="green">"10"</span> <span class="red">||</span> <span class="orange">20</span> <span class="red">===</span> <span class="green">"20"</span><span class="yellow">)</span></code>
+              <code class="problem__code"><span class="violet">if</span> <span class="yellow">(</span><span class="red">false</span> <span class="red">||</span> <span class="red">false</span> <span class="red">&&</span> <span class="red">true</span> <span class="red">||</span> <span class="red">false</span><span class="yellow">)</span></code>
+              <code class="problem__code"><span class="violet">if</span> <span class="yellow">(</span><span class="red">false</span> <span class="red">||</span> <span class="red">false</span> <span class="red">||</span> <span class="red">false</span><span class="yellow">)</span></code>
+              <code class="problem__code">// Як результат в консоль нічого не потрпать тому що взе звелося до false</code>
+            </div>
+          </div>
+        </section>
+        <section class="problem">
+          <div class="problem__container">
+            <h2 class="problem__title">Задача №4</h2>
+            <div class="problem__subtitle">
+              <p>
+                Створити функцію, яка повертає результат ділення числа <b>a</b> на число <b>b</b> з додаванням рядка <b>"Результат ділення:"</b>
+              </p>
+              <p>
+              Викликавши функцію і передаючі різні значення, в тому числі не передаючі зовсім. Функція не має повертати <b>Nan</b>, <b>Infinite</b> або помилку.
+              </p>
+            </div>
+            <div class="problem__wrap">
+              <code class="problem__code"><span class="violet">function</span> <span class="yellow">calcDivision</span><span class="yellow">(</span><span class="blue">a</span>, <span class="blue">b</span><span class="yellow">)</span> <span class="yellow">{</span></code>
+              <code class="problem__code"><span class="violet">return</span> <span class="blue">a</span> <span class="red">/</span> <span class="blue">b</span></code>
+              <code class="problem__code"><span class="yellow">}</span></code>
+              <code class="problem__code"><span class="violet">function</span> <span class="yellow">showMessage</span><span class="yellow">(</span><span class="blue">calcDivision</span><span class="yellow">)</span> <span class="yellow">{</span></code>
+              <code class="problem__code"><span class="violet">if</span> <span class="violet">(</span><span class="orange">Number</span><span>.</span><span class="yellow">isNaN</span><span class="dark-blue">(</span><span class="blue">calcDivision</span><span class="dark-blue">)</span> <span class="red">||</span> <span class="orange">Math</span><span>.</span><span class="yellow">abs</span><span class="dark-blue">(</span><span class="blue">calcDivision</span><span class="dark-blue">)</span> <span class="red">===</span> <span class="red">Infiniry</span><span class="violet">)</span> <span class="violet">{</span></code>
+              <code class="problem__code"><span class="orange">console</span><span>.</span><span class="yellow">log</span><span class="dark-blue">(</span><span class="green">`Ні так не ділиться`</span><span class="dark-blue">)</span></code>
+              <code class="problem__code"><span class="violet">}</span> <span class="violet">else</span> <span class="violet">{</span></code>
+              <code class="problem__code"><span class="violet">let</span> <span class="blue">result</span> <span class="red">=</span> <span class="green">`Результат ділення:</span> <span class="dark-blue">$</span><span class="dark-blue">{</span><span class="blue">calcDivision</span><span class="dark-blue">}</span><span class="green">`</span></code>
+              <code class="problem__code"><span class="orange">console</span><span>.</span><span class="yellow">log</span><span class="dark-blue">(</span><span class="blue">result</span><span class="dark-blue">)</span></code>
+              <code class="problem__code"><span class="violet">}</span></code>
+              <code class="problem__code"><span class="yellow">}</span></code>
+              <code class="problem__code"><span class="yellow">showMessage</span><span class="yellow">(</span><span class="yellow">calcDivision</span><span class="violet">(</span><span class="orange">10</span><span>,</span><span class="orange">2</span><span class="violet">)</span><span class="yellow">)</span></code>
+              <code class="problem__code">// Результат в консолі</code>
+            </div>
+          </div>
+        </section>
+        <section class="problem">
+          <div class="problem__container">
+            <h2 class="problem__title">Задача №5</h2>
+            <div class="problem__subtitle">
+              <p>Створити масив данних - <b>5</b> елементів, один з яких число <b>10</b></p>
+              <p>Опрацювати масив за допомогою методу перебору. Перевірити елемент на відповідність числу <b>10</b>, та у разі відповідності, вивести в консоль.</p>
+            </div>
+            <div class="problem__wrap">
+              <code class="problem__code"><span class="violet">let</span> <span class="blue">someArray</span> <span class="red">=</span> <span class="orange">[</span><span class="orange">37</span><span>,</span> <span class="green">"Владислав"</span><span>,</span> <span class="red">false</span><span>,</span> <span class="orange">10</span><span>,</span> <span class="green">"Фрілансер по життю"</span><span class="orange">]</span></code>
+              <code class="problem__code"><span class="orange">someArray</span><span>.</span><span class="yellow">forEach</span><span class="yellow">(</span><span class="violet">(</span><span class="blue">item</span><span class="violet">)</span><span class="violet"> =></span> <span class="violet">{</span></code>
+              <code class="problem__code"><span class="violet">if</span> <span class="dark-blue">(</span><span class="blue">item</span> <span class="red">===</span> <span class="orange">10</span><span class="dark-blue">)</span> <span class="dark-blue">{</span></code>
+              <code class="problem__code"><span class="orange">console</span><span>.</span><span class="yellow">log</span><span class="yellow">(</span><span class="green">`Елемент</span> <span class="violet">$</span><span class="violet">{</span><span class="blue">item</span><span class="violet">}</span> <span class="green">був знайдений в масиві`</span><span class="yellow">)</span></code>
+              <code class="problem__code"><span class="dark-blue">}</span></code>
+              <code class="problem__code"><span class="violet">}</span><span class="yellow">)</span></code>
+              <code class="problem__code"><span>// Результат в консолі</span></code>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="footer__container">
+          <div class="footer__text">Зроблено накурсі з якісної побудови web-інтерфейсів "Фрілансер по життю"</div>
+        </div>
+      </footer>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>
