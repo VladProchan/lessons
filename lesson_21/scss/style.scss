@@ -77,9 +77,10 @@ body {
   }
 
   &__title{
-    font-size: toRem(40);
+    @include adaptiveValue("font-size", 40, 30);
     font-weight: 700;
     text-align: center;
+    line-height: 1.1;
   }
 }
 
@@ -91,7 +92,7 @@ body {
   }
 
   &__title {
-    font-size: toRem(40);
+    @include adaptiveValue("font-size", 40, 30);
     margin-bottom: toRem(20)
   }
 
@@ -119,6 +120,20 @@ body {
 
   &__answer {
     font-size: toRem(18);
+    line-height: 1.5;
+  }
+}
+//====================================================================================================
+.footer {
+  padding: toRem(20) 0;
+  background-color: #23262E;
+  &__container {
+  }
+
+  &__text {
+    text-align: center;
+    font-size: toRem(20);
+    color: #fff;
     line-height: 1.5;
   }
 }

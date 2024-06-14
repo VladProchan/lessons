@@ -152,17 +152,60 @@ body {
   padding: 1.875rem 0.9375rem;
 }
 .header__title {
-  font-size: 2.5rem;
   font-weight: 700;
   text-align: center;
+  line-height: 1.1;
+}
+@media (min-width: 84.375em) {
+  .header__title {
+    font-size: 2.5rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 84.375em) {
+  @supports (font-size: clamp( 1.875rem , 1.6808252427rem  +  0.9708737864vw , 2.5rem )) {
+    .header__title {
+      font-size: clamp( 1.875rem , 1.6808252427rem  +  0.9708737864vw , 2.5rem );
+    }
+  }
+  @supports not (font-size: clamp( 1.875rem , 1.6808252427rem  +  0.9708737864vw , 2.5rem )) {
+    .header__title {
+      font-size: calc(1.875rem + 0.625 * (100vw - 20rem) / 64.375);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .header__title {
+    font-size: 1.875rem;
+  }
 }
 
 .problem {
   padding: 0.9375rem 0;
 }
 .problem__title {
-  font-size: 2.5rem;
   margin-bottom: 1.25rem;
+}
+@media (min-width: 84.375em) {
+  .problem__title {
+    font-size: 2.5rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 84.375em) {
+  @supports (font-size: clamp( 1.875rem , 1.6808252427rem  +  0.9708737864vw , 2.5rem )) {
+    .problem__title {
+      font-size: clamp( 1.875rem , 1.6808252427rem  +  0.9708737864vw , 2.5rem );
+    }
+  }
+  @supports not (font-size: clamp( 1.875rem , 1.6808252427rem  +  0.9708737864vw , 2.5rem )) {
+    .problem__title {
+      font-size: calc(1.875rem + 0.625 * (100vw - 20rem) / 64.375);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .problem__title {
+    font-size: 1.875rem;
+  }
 }
 .problem__subtitle {
   font-size: 1.125rem;
@@ -190,5 +233,16 @@ body {
 }
 .problem__answer {
   font-size: 1.125rem;
+  line-height: 1.5;
+}
+
+.footer {
+  padding: 1.25rem 0;
+  background-color: #23262E;
+}
+.footer__text {
+  text-align: center;
+  font-size: 1.25rem;
+  color: #fff;
   line-height: 1.5;
 }
