@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css?family=JetBrains+Mono:100,200,300,regular,500,600,700,800,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic&display=swap");
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+html,
+body {
+  line-height: 1;
+  height: 100%;
+}
+
+/* FORM */
+input,
+button,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+input,
+textarea {
+  width: 100%;
+}
+
+button,
+select,
+option {
+  cursor: pointer;
+}
+
+input[type=text],
+input[type=email],
+input[type=tel],
+textarea {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+@font-face {
+  font-family: "CeraPro";
+  src: url("../fonts/CeraPro-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "CeraPro";
+  src: url("../fonts/CeraPro-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+body {
+  color: #000;
+  font-family: "CeraPro", sans-serif;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: clip;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.wrapper main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+[class*=__container] {
+  max-width: 1350px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.let,
+.const {
+  color: #c74ded;
+}
+
+.variable {
+  color: #18e8c6;
+}
+
+.number,
+.console {
+  color: #ed9c12;
+}
+
+.log,
+.brackets {
+  color: #ffe363;
+}
+
+.bg-code {
+  background-color: #23262e;
+  border-radius: 0.3125rem;
+  padding: 0 0.3125rem;
+}
+
+.operator {
+  color: #ee5d43;
+}
+
+.value {
+  color: #96e06a;
+}
+
+.header__container {
+  border-bottom: 0.125rem solid #b4b4b4;
+  padding: 1.875rem 0.9375rem;
+}
+.header__title {
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.1;
+}
+@media (min-width: 84.375em) {
+  .header__title {
+    font-size: 2.5rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 84.375em) {
+  @supports (font-size: clamp( 1.875rem , 1.6808252427rem  +  0.9708737864vw , 2.5rem )) {
+    .header__title {
+      font-size: clamp( 1.875rem , 1.6808252427rem  +  0.9708737864vw , 2.5rem );
+    }
+  }
+  @supports not (font-size: clamp( 1.875rem , 1.6808252427rem  +  0.9708737864vw , 2.5rem )) {
+    .header__title {
+      font-size: calc(1.875rem + 0.625 * (100vw - 20rem) / 64.375);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .header__title {
+    font-size: 1.875rem;
+  }
+}
+
+.problem {
+  padding: 0.9375rem 0;
+}
+.problem__title {
+  margin-bottom: 1.25rem;
+}
+@media (min-width: 84.375em) {
+  .problem__title {
+    font-size: 2.5rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 84.375em) {
+  @supports (font-size: clamp( 1.875rem , 1.6808252427rem  +  0.9708737864vw , 2.5rem )) {
+    .problem__title {
+      font-size: clamp( 1.875rem , 1.6808252427rem  +  0.9708737864vw , 2.5rem );
+    }
+  }
+  @supports not (font-size: clamp( 1.875rem , 1.6808252427rem  +  0.9708737864vw , 2.5rem )) {
+    .problem__title {
+      font-size: calc(1.875rem + 0.625 * (100vw - 20rem) / 64.375);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .problem__title {
+    font-size: 1.875rem;
+  }
+}
+.problem__subtitle {
+  font-size: 1.125rem;
+  margin-bottom: 1.25rem;
+  line-height: 1.5;
+}
+.problem__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 0.625rem;
+  background-color: #23262e;
+  padding: 0.9375rem;
+  border-radius: 0.9375rem;
+  color: #fff;
+  margin-bottom: 1.25rem;
+}
+.problem__code {
+  font-family: "JetBrains Mono", sans-serif;
+  line-height: 1.5;
+}
+.problem__answer {
+  font-size: 1.125rem;
+  line-height: 1.5;
+}
+
+.footer {
+  padding: 1.25rem 0;
+  background-color: #23262e;
+}
+.footer__text {
+  text-align: center;
+  font-size: 1.25rem;
+  color: #fff;
+  line-height: 1.5;
+}
