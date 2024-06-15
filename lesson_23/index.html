@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Lesson 23</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__container">
+          <h1 class="header__title">Домашня робота до уроку №23 (Основи JavaScript. Частина №3)</h1>
+        </div>
+      </header>
+      <main class="main">
+        <section class="problem">
+          <div class="problem__container">
+            <h2 class="problem__title">Задача №1</h2>
+            <div class="problem__subtitle">Отримати в константу елемент <code class="problem__code"><span class="bg-code"><span class="white"><</span><span class="red">body</span><span class="white">></span></span></code> </div>
+            <h3 class="problem__lable-title">Приклад коду:</h3>
+            <div class="problem__wrap problem__wrap--last">
+              <code class="problem__code"><span class="violet">const</span> <span class="blue">bodyElement</span> <span class="red">=</span> <span class="orange">document</span><span>.</span><span class="blue">body</span></code>
+              <code class="problem__code"><span class="orange">console</span><span>.</span><span class="yellow">log</span><span class="yellow">(</span><span class="blue">bodyElement</span><span class="yellow">)</span></code>
+              <code class="problem__code"><span class="gray">// Результат в консолі</span></code>
+            </div> 
+          </div>
+        </section>
+        <section class="problem">
+          <div class="problem__container">
+            <h2 class="problem__title">Задача №2</h2>
+            <div class="problem__subtitle">
+              <p>
+              Написати функцію, яка додає в <code class="problem__code"><span class="bg-code"><span class="white"><</span><span class="red">body</span><span class="white">></span></span></code> список <b>UL</b>
+              </p>
+              <p>
+              з певною кількістю <b>LI</b> (кількість має передаватись як параметр функції, також мати значення за замовченням)
+              </p>
+              <p>P.s. <i>замісьть</i> <code class="problem__code"><span class="bg-code"><span class="white"><</span><span class="red">body</span><span class="white">></span></span></code> <i>використовую власне значеня.</i></p>
+            </div>
+            <h3 class="problem__lable-title">Приклад коду:</h3>
+            <div class="problem__wrap">
+              <code class="problem__code"><span class="violet">const</span> <span class="blue">list</span> <span class="red">=</span> <span class="orange">document</span><span>.</span><span class="yellow">querySelector</span><span class="yellow">(</span><span class="green">".list"</span><span class="yellow">)</span></code>
+              <code class="problem__code"><span class="violet">function</span> <span class="yellow">addingAnElement</span><span class="yellow">(</span><span class="blue">number</span> <span class="red">=</span> <span class="orange">3</span><span class="yellow">)</span> <span class="yellow">{</span></code>
+              <code class="problem__code"><span class="violet tab-1">let</span> <span class="blue">newUl</span> <span class="red">=</span> <span class="orange">document</span><span>.</span><span class="yellow">createElement</span><span class="violet">(</span><span class="green">"ul"</span><span class="violet">)</span></code>
+              <code class="problem__code"><span class="orange tab-1">list</span><span>.</span><span class="yellow">insertAdjacentElement</span><span class="violet">(</span><span class="green">"beforeend"</span><span>,</span> <span class="blue">newUl</span><span class="violet">)</span></code>
+              <code class="problem__code"><span class="violet tab-1">for</span> <span class="violet">(</span><span class="violet">let</span> <span class="blue">i</span> <span class="red">=</span> <span class="orange">1</span><span>;</span> <span class="blue">i</span> <span class="red"><</span> <span class="blue">number</span> <span class="red">+</span> <span class="orange">1</span><span>;</span> <span class="red">+</span><span class="red">+</span><span class="blue">i</span><span class="violet">)</span> <span class="violet">{</span></code>
+              <code class="problem__code"><span class="violet tab-2">let</span> <span class="blue">newLi</span> <span class="red">=</span> <span class="orange">document</span><span>.</span><span class="yellow">createElement</span><span class="dark-blue">(</span><span class="green">"li"</span><span class="dark-blue">)</span></code>
+              <code class="problem__code"><span class="orange tab-2">newLi</span><span>.</span><span class="blue">innerHTML</span> <span class="red">=</span> <span class="green">`Рядок №</span><span class="dark-blue">$</span><span class="dark-blue">{</span><span class="blue">i</span><span class="dark-blue">}</span><span class="green">`</span></code>
+              <code class="problem__code"><span class="orange tab-2">newUl</span><span>.</span><span class="yellow">insertAdjacentElement</span><span class="dark-blue">(</span><span class="green">"beforeend"</span><span>,</span> <span class="blue">newLi</span><span class="dark-blue">)</span></code>
+              <code class="problem__code"><span class="violet tab-1">}</span></code>
+              <code class="problem__code"><span class="yellow">}</span></code>
+              <code class="problem__code"><span class="yellow">addingAnElement(</span><span class="orange">6</span><span class="yellow">)</span></code>
+            </div>
+            <h3 class="problem__lable-title">Виведення результату:</h3>
+            <div class="problem__result result list">
+            </div>
+          </div>
+        </section>
+        <section class="problem">
+          <div class="problem__container">
+            <h2 class="problem__title">Задача №3</h2>
+            <div class="problem__subtitle">
+              <p>
+                Додати до елементу <code class="problem__code"><span class="bg-code"><span class="white"><</span><span class="red">body</span><span class="white">></span></span></code> класс <b>loaded.</b>
+              </p>
+              <p>
+                Потім перевірити чи є клас <b>loaded</b> у елемента <code class="problem__code"><span class="bg-code"><span class="white"><</span><span class="red">body</span><span class="white">></span></span></code> і, якщо є, додати стиль кольору тесту зедлений.
+              </p>
+              <p>P.s. <i>замісьть</i> <code class="problem__code"><span class="bg-code"><span class="white"><</span><span class="red">body</span><span class="white">></span></span></code> <i>використовую власне значеня.</i></p>
+            </div>
+            <h3 class="problem__lable-title">Приклад коду:</h3>
+            <div class="problem__wrap">
+              <code class="problem__code"><span class="violet">const</span> <span class="blue">text</span> <span class="red"></span> <span class="orange">document</span><span>.</span><span class="yellow">querySelector</span><span class="yellow">(</span><span class="green">".text"</span><span class="yellow">)</span></code>
+              <code class="problem__code"><span class="orange">text</span><span>.</span><span class="blue">classList</span><span>.</span><span class="yellow">add</span><span class="yellow">(</span><span class="green">'loaded'</span><span class="yellow">)</span></code>
+              <code class="problem__code"><span class="violet">if</span> <span class="yellow">(</span><span class="orange">text</span><span>.</span><span class="blue">classList</span><span>.</span><span class="yellow">contains</span><span class="violet">(</span><span class="green">'loaded'</span><span class="violet">)</span><span class="yellow">)</span> <span class="yellow">{</span></code>
+              <code class="problem__code"><span class="orange tab-1">text</span><span>.</span><span class="blue">style</span><span>.</span><span class="blue">color</span> <span class="red">=</span> <span class="green">`green`</span></code>
+              <code class="problem__code"><span class="yellow">}</span></code>
+            </div>
+            <h3 class="problem__lable-title">Виведення результату:</h3>
+            <div class="problem__result result">
+              <p class="result__text text">Фрілансер по життю</p>
+            </div>
+          </div>
+        </section>
+        <section class="problem">
+          <div class="problem__container">
+            <h2 class="problem__title">Задача №4</h2>
+            <div class="problem__subtitle">
+              <p>
+                Дано в <b>html:</b> три елементи з класом <b>item</b>.
+              </p>
+              <p>
+                Треба отримати ці елементи в константу, кожному додати клас <code class="problem__code"><span class="bg-code"><span class="green">active</span></span></code>,
+              </p>
+              <p>
+                та перезаписати контент всередені кожного елемента на <b>"Елемент №(тут порядковий номер елементу починаючи з 1)"</b>.
+              </p>
+            </div>
+            <h3 class="problem__lable-title">Приклад коду:</h3>
+            <div class="problem__wrap">
+              <code class="problem__code"><span class="violet">const</span> <span class="blue">item</span> <span class="red">=</span> <span class="orange">document</span><span>.</span><span class="yellow">querySelectorAll</span><span class="yellow">(</span><span class="green">".item"</span><span class="yellow">)</span></code>
+              <code class="problem__code"><span class="orange">item</span><span>.</span><span class="yellow">forEach</span><span class="yellow">(</span><span class="violet">(</span><span class="blue">userName</span><span>,</span> <span class="blue">index</span><span class="violet">)</span> <span class="violet"> => </span> <span class="violet">{</span></code>
+              <code class="problem__code"><span class="orange tab-1">userName</span><span>.</span><span class="blue">classList</span><span>.</span><span class="yellow">add</span><span class="dark-blue">(</span><span class="green">"active"</span><span class="dark-blue">)</span></code>  
+              <code class="problem__code"><span class="orange tab-1">userName</span><span>.</span><span class="blue">innerHTML</span> <span class="red">=</span> <span class="green">`Елемент №</span><span class="dark-blue">$</span><span class="dark-blue">{</span><span class="blue">index</span> <span class="red">+</span> <span class="orange">1</span><span class="dark-blue">}</span><span class="green">`</span></code>
+              <code class="problem__code"><span class="violet">}</span><span class="yellow">)</span></code>
+            </div>
+            <h3 class="problem__lable-title">Виведення результату:</h3>
+            <div class="problem__result result">
+              <ul class="result__list">
+                <li class="result__item item">Рядок для прикладу</li>
+                <li class="result__item item">Рядок для прикладу</li>
+                <li class="result__item item">Рядок для прикладу</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section class="problem">
+          <div class="problem__container">
+            <h2 class="problem__title">Задача №5</h2>
+            <div class="problem__subtitle">
+              <p>
+                Дано в <b>html:</b> текст, далі кнопка з класом <code class="problem__code"><span class="bg-code"><span class="green">button</span></span></code>.
+              </p>
+              <p>Треба прокрутити скрол сторінки до кнопки.</p>
+            </div>
+            <h3 class="problem__lable-title">Приклад коду:</h3>
+            <div class="problem__wrap">
+              <code class="problem__code"><span class="violet">const</span> <span class="blue">button</span> <span class="red">=</span> <span class="orange">document</span><span>.</span><span class="yellow">querySelector</span><span class="yellow">(</span><span class="green">'.button'</span><span class="yellow">)</span></code>
+              <code class="problem__code"><span class="violet">function</span> <span class="yellow">scrollToBlock</span><span class="yellow">(</span><span class="blue">element</span><span class="yellow">)</span> <span class="yellow">{</span></code>
+              <code class="problem__code"><span class="violet tab-1">const</span> <span class="blue">block</span> <span class="red">=</span> <span class="orange">element</span><span>.</span><span class="blue">dataset</span><span>.</span><span class="blue">scroll</span></code>
+              <code class="problem__code"><span class="orange tab-1">element</span><span>.</span><span class="yellow">scrollIntoView</span><span class="violet">(</span><span class="dark-blue">{</span></code>
+              <code class="problem__code"><span class="gray tab-2">//"start", "center", "end". За замовчуванням "center".</span></code>
+              <code class="problem__code"><span class="tab-2">block:</span> <span class="blue">block</span><span>,</span></code>
+              <code class="problem__code"><span class="gray tab-2"> //"start", "center", "end" чи "nearest". За замовчуванням "nearest".</span></code>
+              <code class="problem__code"><span class="tab-2">inline:</span> <span class="green">"nearest"</span><span>,</span></code>
+              <code class="problem__code"><span class="tab-2">behavior:</span> <span class="green">"smooth"</span></code>
+              <code class="problem__code"><span class="dark-blue tab-1">}</span><span class="violet">)</span></code>
+              <code class="problem__code"><span class="yellow">}</span></code>
+              <code class="problem__code"><span class="yellow">scrollToBlock</span><span class="yellow">(</span><span class="blue">button</span><span class="yellow">)</span></code>
+            </div>
+            <h3 class="problem__lable-title">Виведення результату:</h3>
+            <div class="problem__result result">
+             <button data-scroll="center" class="result__button button">Кнопка до якої скролимось</button>
+            </div>
+          </div>
+        </section>
+        <section class="problem">
+          <div class="problem__container">
+            <h2 class="problem__title">Задача №6</h2>
+            <div class="problem__subtitle">
+              <p>
+                Дано в <b>html:</b> посилання з класом <code class="problem__code"><span class="bg-code"><span class="green">link</span></span></code>.
+              </p>
+              <p>Треба додати до посилання дата атрибут зі значенням <b>100</b>.</p>
+              <p>Потім отримати значення атрибуту, та, якщо значення меньше <b>200</b>,</p>
+              <p>пофарбувати колір тексту посилання в червоний</p>
+            </div>
+            <h3 class="problem__lable-title">Приклад коду:</h3>
+            <div class="problem__wrap">
+              <code class="problem__code"><span class="violet">const</span> <span class="blue">link</span> <span class="red">=</span> <span class="orange">document</span><span>.</span><span class="yellow">querySelector</span><span class="yellow">(</span><span class="green">'.link'</span><span class="yellow">)</span></code>
+              <code class="problem__code"><span class="orange">link</span><span>.</span><span class="blue">dataset</span><span>.</span><span class="blue">number</span> <span class="red">=</span> <span class="green">"100"</span></code>
+              <code class="problem__code"><span class="violet">const</span> <span class="blue">number</span> <span class="red">=</span> <span class="orange">link</span><span>.</span><span class="blue">dataset</span><span>.</span><span class="blue">number</span></code>
+              <code class="problem__code"><span class="violet">if</span> <span class="yellow">(</span><span class="red">+</span><span class="blue">number</span> <span class="red"><</span> <span class="orange">200</span> <span class="yellow">)</span> <span class="yellow">{</span></code>
+              <code class="problem__code"><span class="orange tab-1">link</span><span>.</span><span class="blue">style</span><span>.</span><span class="blue">color</span> <span class="red">=</span> <span class="green">`red`</span></code>
+              <code class="problem__code"><span class="yellow">}</span></code>
+            </div>
+            <h3 class="problem__lable-title">Виведення результату:</h3>
+            <div class="problem__result result">
+             <a class="result__link link" href="https://fls.guru/" target="_blank">https://fls.guru/</a>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="footer__container">
+          <div class="footer__text">Зроблено на курсі з якісної побудови web-інтерфейсів "Фрілансер по життю"</div>
+        </div>
+      </footer>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>
