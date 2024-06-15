@@ -24,7 +24,7 @@ function showMessage(calcDivision) {
   if (Number.isNaN(calcDivision) || Math.abs(calcDivision) === Infinity) {
     console.log(`Ні так не ділиться`)
   } else {
-    let result = `Результат ділення: ${calcDivision}`
+    const result = `Результат ділення: ${calcDivision}`
     console.log(result)
   }
 }

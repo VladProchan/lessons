@@ -151,6 +151,18 @@ body {
   color: #96e06a;
 }
 
+.tab-1 {
+  margin-left: 1.25rem;
+}
+
+.tab-2 {
+  margin-left: 2.5rem;
+}
+
+.tab-3 {
+  margin-left: 3.75rem;
+}
+
 .header__container {
   border-bottom: 0.125rem solid #b4b4b4;
   padding: 1.875rem 0.9375rem;

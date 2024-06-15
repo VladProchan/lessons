@@ -74,6 +74,16 @@ body {
 .green {
   color: #96e06a;
 }
+
+.tab-1{
+  margin-left: toRem(20);
+}
+.tab-2{
+  margin-left: toRem(40);
+}
+.tab-3{
+  margin-left: toRem(60);
+}
 //====================================================================================================
 .header {
   &__container {
