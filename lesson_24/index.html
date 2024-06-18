@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <title>Lesson 24</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__container">
+          <h1 class="header__title">Домашня робота до уроку №24 (Основи JavaScript. Частина №4)</h1>
+        </div>
+      </header>
+      <main class="main">
+        <section class="problem">
+          <div class="problem__container">
+            <h2 class="problem__title">Задача №1</h2>
+            <div class="problem__subtitle">
+              <p>Дано в <b>html:</b> три елементи з класом <code class="problem__code"><span class="bg-code"><span class="green">".item"</span></span></code>.</p>
+              <p>При кліку на кожен з елментів додати клас <code class="problem__code"><span class="bg-code"><span class="green">".active"</span></span></code>,</p>
+              <p>при повторному кліку прибрати клас</p>
+            </div>
+            <h3 class="problem__lable-title">Приклад коду:</h3>
+            <div class="problem__wrap">
+              <pre><code><span class="orange">document</span><span>.</span><span class="yellow">addEventListener</span><span class="yellow">(</span><span class="green">"click"</span><span>,</span> <span class="blue">documentAction</span><span class="yellow">)</span></code></pre>
+              <pre><code><span class="violet">function</span> <span class="yellow">documentAction</span><span class="yellow">(</span><span class="blue">e</span><span class="yellow">)</span> <span class="yellow">{</span></code></pre>
+              <pre><code><span class="violet tab-1">const</span> <span class="blue">targetElement</span> <span class="red">=</span> <span class="orange">e</span><span>.</span><span class="blue">target</span></code></pre>
+              <pre><code><span class="violet tab-1">if</span> <span class="violet">(</span><span class="orange">targetElement</span><span>.</span><span class="yellow">closest</span><span class="dark-blue">(</span><span class="green">'.item'</span><span class="dark-blue">)</span><span class="violet">)</span> <span class="violet">{</span></code></pre>
+              <pre><code><span class="violet tab-2">const</span> <span class="blue">currentElement</span> <span class="red">=</span> <span class="orange">targetElement</span><span>.</span><span class="yellow">closest</span><span class="dark-blue">(</span><span class="green">'.item'</span><span class="dark-blue">)</span></code></pre>
+              <pre><code><span class="orange tab-2">currentElement</span><span>.</span><span class="blue">classList</span><span>.</span><span class="yellow">toggle</span><span class="dark-blue">(</span><span class="green">'active'</span><span class="dark-blue">)</span></code></pre>
+              <pre><code><span class="violet tab-1">}</span></code></pre>
+              <pre><code><span class="yellow">}</span></code></pre>
+            </div> 
+            <h3 class="problem__lable-title">Виведення результату:</h3>
+            <div class="problem__result result">
+              <ul class="result__list">
+                <li class="result__item item">Тестовий рядок №1</li>
+                <li class="result__item item">Тестовий рядок №2</li>
+                <li class="result__item item">Тестовий рядок №3</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section class="problem">
+          <div class="problem__container">
+            <h2 class="problem__title">Задача №2</h2>
+            <div class="problem__subtitle">
+              <p>Дано в <b>css/scss:</b> <code class="problem__code"><span class="bg-code"><span class="white">&lt;</span><span class="red">body</span><span class="white">&gt;</span></span></code> прозорий,</p>
+              <p>При повному завантаженню сторінки додати клас до <code class="problem__code"><span class="bg-code"><span class="white">&lt;</span><span class="red">body</span><span class="white">&gt;</span></span></code> який прибирає прозорість.</p>
+            </div>
+            <h3 class="problem__lable-title">Приклад коду:</h3>
+            <div class="problem__wrap problem__wrap--last">
+              <pre><code><span class="violet">const</span> <span class="blue">bodyElement</span> <span class="red">=</span> <span class="orange">document</span><span class="blue">body</span></code></pre>
+              <pre><code><span class="orange">window</span><span>.</span><span class="yellow">addEventListener</span><span class="yellow">(</span><span class="green">"load"</span><span>,</span> <span class="blue">domLoaded</span><span class="yellow">)</span></code></pre>
+              <pre><code><span class="violet">function</span> <span class="yellow">domLoaded</span><span class="yellow">(</span><span class="blue-opaciti">e</span><span class="yellow">)</span> <span class="yellow">{</span></code></pre>
+              <pre><code><span class="orange tab-1">bodyElement</span><span>.</span><span class="blue">classList</span><span>.</span><span class="yellow">add</span><span class="violet">(</span><span class="green">'loaded'</span><span class="violet">)</span></code></pre>
+              <pre><code><span class="yellow">}</span></code></pre>
+              <pre><code><span class="gray">// Результат можна спостерігати при завантаженні сторінки</span></code></pre>
+            </div>
+          </div>
+        </section>
+        <section class="problem">
+          <div class="problem__container">
+            <h2 class="problem__title">Задача №3</h2>
+            <div class="problem__subtitle">
+              <p>Дано в <b>html:</b> <code class="problem__code"><span class="bg-code"><span class="white">&lt;</span><span class="red">header</span><span class="white">&gt;</span></span></code> <code class="problem__code"><span class="bg-code"><span class="white">&lt;</span><span class="red">main</span><span class="white">&gt;</span></span></code> <code class="problem__code"><span class="bg-code"><span class="white">&lt;</span><span class="red">footer</span><span class="white">&gt;</span></span></code>,</p>
+              <p>Пи наведенні курсору на <code class="problem__code"><span class="bg-code"><span class="white">&lt;</span><span class="red">header</span><span class="white">&gt;</span></span></code> змінювати колір фону у <code class="problem__code"><span class="bg-code"><span class="white">&lt;</span><span class="red">footer</span><span class="white">&gt;</span></span></code>.</p>
+              <p>Коли курсор йде з <code class="problem__code"><span class="bg-code"><span class="white">&lt;</span><span class="red">header</span><span class="white">&gt;</span></span></code> повертати початковий фон для <code class="problem__code"><span class="bg-code"><span class="white">&lt;</span><span class="red">footer</span><span class="white">&gt;</span></span></code>.</p>
+            </div>
+            <h3 class="problem__lable-title">Приклад коду:</h3>
+            <div class="problem__wrap">
+              <pre><code><span class="violet">const</span> <span class="blue">elementHeader</span> <span class="red">=</span> <span class="orange">document</span><span>.</span><span class="yellow">querySelector</span><span class="yellow">(</span><span class="green">".result__header"</span><span class="yellow">)</span></code></pre>
+              <pre><code><span class="violet">const</span> <span class="blue">elementFooter</span> <span class="red">=</span> <span class="orange">document</span><span>.</span><span class="yellow">querySelector</span><span class="yellow">(</span><span class="green">".result__footer"</span><span class="yellow">)</span></code></pre>
+              <pre><code><span class="orange">document</span><span>.</span><span class="yellow">addEventListener</span><span class="yellow">(</span><span  class="green">"mouseover"</span><span>,</span><span class="blue">documentAction</span><span class="yellow">)</span></code></pre>
+              <pre><code><span class="violet">function</span> <span class="yellow">documentAction</span><span class="yellow">(</span><span class="blue">e</span><span class="yellow">)</span> <span class="yellow">{</span></code></pre>
+              <pre><code><span class="violet tab-1">const</span> <span class="blue">targetElement</span> <span class="red">=</span> <span class="orange">e</span><span>.</span><span class="blue">target</span></code></pre>
+              <pre><code><span class="violet tab-1">if</span> <span class="violet">(</span><span class="blue">elementHeader</span> <span class="red">===</span> <span class="blue">targetElement</span><span class="violet">)</span> <span class="violet">{</span></code></pre>
+              <pre><code><span class="orange tab-2">elementFooter</span><span>.</span><span class="blue">classList</span><span>.</span><span class="yellow">add</span><span class="dark-blue">(</span><span class="green">"hover"</span><span class="dark-blue">)</span></code></pre>
+              <pre><code><span class="violet tab-1">}</span> <span class="violet">else</span> <span class="violet">{</span></code></pre>
+              <pre><code><span class="orange tab-2">elementFooter</span><span>.</span><span class="blue">classList</span><span>.</span><span class="yellow">remove</span><span class="dark-blue">(</span><span class="green">"hover"</span><span class="dark-blue">)</span></code></pre>
+              <pre><code><span class="violet tab-1">}</span></code></pre>
+              <pre><code><span class="yellow">}</span></code></pre>
+            </div>
+            <h3 class="problem__lable-title">Виведення результату:</h3>
+            <div class="problem__result result">
+              <div class="result__wrap">
+                <div class="result__header">Header</div>
+                <div class="result__main">Main</div>
+                <div class="result__footer">Footer</div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="problem">
+          <div class="problem__container">
+            <h2 class="problem__title">Задача №4</h2>
+            <div class="problem__subtitle">
+              <p>Дано в <b>html:</b> текст, елемент з класом <code class="problem__code"><span class="bg-code"><span class="green">".item"</span></span></code>, текст. Так, що елемент з класом <code class="problem__code"><span class="bg-code"><span class="green">".item"</span></span></code> за межами в'юпотрта.</p>
+              <p>Створити функцію яка будує інтервал який буде змінювати контент в елементі <code class="problem__code"><span class="bg-code"><span class="green">".item"</span></span></code>. виводячи цифру яка збільшується на одиницю: 1 2 3 ... і т.д.</p>
+              <p> Затримка між зміною числа, та до якого числа має працювати інтервал має задаватись в дата атрибутах елемента <code class="problem__code"><span class="bg-code"><span class="green">".item"</span></span></code>.</p>
+              <p>Функція має запустатить коли ми доскролюємо до елементу item (його видно), і не запускатись повторно.</p>
+            </div>
+            <h3 class="problem__lable-title">Приклад коду:</h3>
+            <div class="problem__wrap">
+              <pre><code><span class="violet">const</span> <span class="blue">elementTimer</span> <span class="red">=</span> <span class="orange">document</span><span>.</span><span class="yellow">querySelector</span><span class="yellow">(</span><span class="green">".timer"</span><span class="yellow">)</span></code></pre>
+              <pre><code><span class="violet">const</span> <span class="blue">elementTimerItem</span> <span class="red">=</span> <span class="orange">document</span><span>.</span><span class="yellow">querySelector</span><span class="yellow">(</span><span class="green">".timer__item"</span><span class="yellow">)</span></code></pre>
+              <pre><code><span class="violet">const</span> <span class="blue">dataTimerEelementTimerItem</span> <span class="red">=</span> <span class="orange">elementTimerItem</span><span>.</span><span class="blue">dataset</span><span>.</span><span class="blue">timer</span></code></pre>
+              <pre><code><span class="violet">const</span> <span class="blue">dataTimerEelementTimerItem</span> <span class="red">=</span> <span class="orange">elementTimerItem</span><span>.</span><span class="blue">dataset</span><span>.</span><span class="blue">speed</span></code></pre>
+              <pre><code><span class="gray">// observer параметри</span></code></pre>
+              <pre><code><span class="violet">const</span> <span class="blue">options</span> <span class="red">=</span> <span class="yellow">{</span></code></pre>
+              <pre><code><span class="tab-1">root:</span> <span class="red">null</span><span>,</span></code></pre>
+              <pre><code><span class="tab-1">rootMargin:</span> <span class="green">"0px 0px 0px 0px"</span><span>,</span></code></pre>
+              <pre><code><span class="tab-1">threshold:</span> <span class="orange">1</span><span>,</span></code></pre>
+              <pre><code><span class="yellow">}</span></code></pre>
+              <pre><code><span class="gray">// що буде відбуватися коли об'єкт з'явиться</span></code></pre>
+              <pre><code><span class="violet">const</span> <span class="yellow">callback</span> <span class="red">=</span> <span class="yellow">(</span><span class="blue">entries</span><span>,</span> <span class="blue-opaciti">observer</span><span class="yellow">)</span><span class="violet"> => </span><span class="yellow">{</span></code></pre>
+              <pre><code><span class="orange tab-1">entries</span><span>.</span><span class="yellow">forEach</span><span class="violet">(</span><span class="blue">entry</span><span class="violet"> => </span><span class="dark-blue">{</span></code></pre>
+              <pre><code><span class="violet tab-2">if</span> <span class="yellow">(</span><span class="orange">entry</span><span>.</span><span class="blue">isIntersecting</span><span class="yellow">)</span> <span class="yellow">{</span></code></pre>
+              <pre><code><span class="orange tab-3">elementTimerItem</span><span>.</span><span class="blue">classList</span><span>.</span><span class="yellow">add</span><span class="violet">(</span><span class="green">'animate'</span><span class="violet">)</span></code></pre>
+              <pre><code><span class="gray tab-3">//запускаємо інтервал який починає рахувати як з'явиться</span></code></pre>
+              <pre><code><span class="violet tab-3">let</span> <span class="blue">i</span> <span class="red">=</span> <span class="orange">0</span></code></pre>
+              <pre><code><span class="violet tab-3">let</span> <span class="blue">timer</span> <span class="red">=</span> <span class="yellow">setInterval</span><span class="violet">(</span><span class="dark-blue">(</span><span class="dark-blue">)</span><span class="violet"> => </span> <span class="dark-blue">{</span></code></pre>
+              <pre><code><span class="blue tab-4">i</span> <span class="red">===</span> <span class="red">+</span><span class="blue">dataTimerEelementTimerItem</span> <span class="red">?</span> <span class="yellow">clearInterval</span><span class="yellow">(</span><span class="blue">timer</span><span class="yellow">)</span> <span class="red">:</span> <span class="red">++</span><span class="blue">i</span></code></pre>
+              <pre><code><span class="orange tab-4">elementTimerItem</span><span>.</span><span class="blue">innerHTML</span> <span class="red">=</span> <span class="green">`я рахую до:</span> <span class="yellow">${</span><span class="blue">i</span><span class="yellow">}</span><span class="green">`</span></code></pre>
+              <pre><code><span class="dark-blue tab-3">}</span><span>,</span> <span class="blue">dataSpeedEelementTimerItem</span><span class="violet">)</span></code></pre>
+              <pre><code><span class="yellow tab-2">}</span></code></pre>
+              <pre><code><span class="dark-blue tab-1">}</span><span class="violet">)</span></code></pre>
+              <pre><code><span class="yellow">}</span></code></pre>
+              <pre><code><span class="gray">// observer створення</span></code></pre>
+              <pre><code><span class="violet">const</span> <span class="blue">observer</span> <span class="red">=</span> <span class="red">new</span> <span class="yellow">IntersectionObserver</span><span class="yellow">(</span><span class="blue">callback</span><span>,</span> <span class="blue">options</span><span class="yellow">)</span></code></pre>
+              <pre><code><span class="gray">// observer відслідковування елементу</span></code></pre>
+              <pre><code><span class="orange">observer</span><span>.</span><span class="yellow">observe</span><span class="yellow">(</span><span class="blue">elementTimer</span><span class="yellow">)</span></code></pre>
+            </div>
+            <h3 class="problem__lable-title">Виведення результату:</h3>
+            <div class="problem__result result">
+              <div class="result__timer timer">
+                <div data-timer="10" data-speed="1000" class="timer__item">я рахую до: 0</div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="footer__container">
+          <div class="footer__text">Зроблено на курсі з якісної побудови web-інтерфейсів "Фрілансер по життю"</div>
+        </div>
+      </footer>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>
