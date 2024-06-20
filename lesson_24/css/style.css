@@ -352,6 +352,7 @@ body {
 }
 .result__item {
   cursor: pointer;
+  display: inline-block;
 }
 .result__button {
   border: 0.125rem solid #23262e;
